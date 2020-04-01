@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Pontano+Sans);
 @font-face {
     font-family: "Pontano Sans";
-    src: url("http://github.com/kmpit/kmpit.github.io/master/fonts/PontanoSans-Regular.ttf");
+    src: "../fonts/PontanoSans-Regular.ttf";
 }
 
 /*Style sheet for index.html*/
@@ -11,12 +11,16 @@ body {	font-family: "Pontano Sans";
 		font-size: 18px;
 		color: #000000;
 		padding-bottom:1vw;
-		margin: 0; }
+		margin: 0; 
+	}
+
+header {	text-align: center;
+			font-size:1.3em;
+			color: #FFFFFF; }
 		
-h1 {	font-size: 4em;
+h1 {	font-size: 3.5em;
 		margin-block-end: 1vw;
-		color: #FFFFFF;
-		text-align: center;}
+		color: #FFFFFF; }
 
 h2 {	font-size: 1.5em;
 		color: rgba(5,124,175,0.3);
@@ -42,79 +46,119 @@ h5 {	color: #C8C8C8;
 		margin-top: 2px;
 		margin-bottom: 2px; }
 
-/*Containers*/
-div.wrapper {	width: 100%	}
+p {	margin-block-start: 0em;
+    margin-block-end: 0.2em;	}
+
+/*Generic containers*/
+div.wrapper {	width: 100%;
+				max-width: 100%;	}
+
+div.foreground {	position: absolute;
+
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%);
+
+	padding: 0;
+	text-align: center; }
+	
+div.column_third {	float: left;
+	width: 31.33%;
+	margin-left: 1%; 
+	margin-right: 1%; }
+
+div.column_half {	float: left;
+	width: 48%;
+	margin-left: 1%;
+	margin-right: 1%; }
+
+div.row:after {		content: "";
+	display: table;
+	clear: both; }
+
+/*Generic components*/
+
+div.button {	display: inline-block;
+				cursor: pointer;
+				padding-left: 10px;
+				padding-right: 10px; 
+				padding-top: 5px;
+				padding-bottom: 5px;
+				border-style: solid;
+				border-width: 5px;
+				border-color: #FFFFFF;	}
+div.button:hover {	background-color: white; }
+div.button:hover > h3 {	color: #a4a7ae; }
+
+div.section_name {	
+	margin-block-start: 1em;
+	margin-block-end:1 em;
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px; 
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: rgba(5,124,175,0.3);	}
+
+
+/*Page elements*/
+
+div.header_bar{
+	width:94%;
+	text-align:right;
+	position:fixed;
+	z-index: 100;
+	padding:3%;
+
+}
+
+div.button.menu_button {
+	background-color: #cfd2d9; 
+	border-style:none; }
+div.button.menu_button:hover {
+		background-color: white;	}
+div.button.menu_button:hover >h3 {
+	color: #a4a7ae;	}
+
+
+div.sidebar { 
+	color:purple;
+	height: 100%; /* 100% Full-height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Stay on top */
+	top: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0); /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
 
 div.titleblock { 	max-width:100%;
 					width:100%;
 
 					height:700px;
 		
-					background-image: url("../images/porch.jpg");
+					background-image: url("../images/porch-2.jpg");
 
 					background-attachment: fixed; 
 					background-position: center;
 					background-repeat: no-repeat;
-					background-size: cover; }
+					background-size: cover; 
 
-div.window {		position: absolute;
-					top: 0%;
-					left: 50%;
-					transform: translate(-50%);
-					padding: 0;
-					text-align: center; }
+					/* padding: 3%; */
+}
 
-div.centred_component {		display: inline-block; }
-					
-div.left_float {	max-width: 60%;
-					position: float; }
-					
-div.column_third {	float: left;
-					width: 31.33%;
-					margin-left: 1%; 
-					margin-right: 1%; }
+div.titleblock_buttons {	display:inline-block;
+							padding-top:1em;
 
-div.column_half {	float: left;
-					width: 48%;
-					margin-left: 1%;
-					margin-right: 1%; }
+}
 
-div.row:after {		content: "";
-					display: table;
-					clear: both; }
-					
-/*Elements*/
-div.button {		display: inline-block;
-					cursor: pointer;
-					padding-left: 10px;
-					padding-right: 10px; 
-					padding-top: 5px;
-					padding-bottom: 5px;
-					border-style: solid;
-					border-width: 5px;
-					border-color: #FFFFFF;	}
-div.button:hover {	background-color: white; }
-div.button:hover > h3 {	color: rgba(5,124,175,0.3); }
-		
-div.section_name {	margin-block-start: 1em;
-					margin-block-end:1 em;
-					display: inline-block;
-					padding-left: 10px;
-					padding-right: 10px; 
-					padding-top: 5px;
-					padding-bottom: 5px;
-					border-style: solid;
-					border-width: 5px;
-					border-color: rgba(5,124,175,0.3);	}
+/*Tables*/		
 
-/*Tables*/
-table.table1 { 	margin-left: auto; 
-				margin-right: auto;
-				margin-block-end: 32px;}
-				
-table.table1 td { 	font-size:1.2em;
-					text-align: center;
-					color: #FFFFFF;}
 					
 /*Links*/
 a { color: white; 
@@ -133,12 +177,18 @@ u1.small {	margin-block-start: 1em;
 li {	margin: 1vw;}
 
 /*Images*/	
-img {	width: auto;
+img {	width: 100%;
 		height: auto;
 		max-width: 100%; }
 
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
+	body {
+		font-size: 22px;
+	}
+	h1 {
+		font-size:2.5em;
+	}
 	div.titleblock {
 	  background-attachment: scroll;
 	}

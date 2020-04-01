@@ -7,18 +7,28 @@
 	<script async src="./javascript/index.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 	<div class = "wrapper">
-	
-		<!--Header at top of page-->
-		<div class="titleblock"> 
-			<div class = "window"> 
-				<h1>Kimberley Pita</h1>
-				<table class="table1">
-					<tr><td id = 'current_term'></td></tr>
-					<tr><td>University of Waterloo</td></tr>
-				</table>
-				<div class = "centered_component">
+		<div id = "sidebar" class = "sidebar">
+			<p>Hello side world</p>
+		</div>
+
+		<div class = "header_bar">
+			<div class = "button menu_button" onclick="sidebarOnClick()">
+				<h3>Menu</h3>
+			</div>
+		</div>
+
+		<!--Main section-->
+		<div class="titleblock" > 
+			<div class = "foreground"> 
+				<header>
+					<h1>Kimberley Pita</h1>
+					<p id = 'current_term'></p>
+					<p>University of Waterloo</p>
+				</header>
+				<div class = "titleblock_buttons">
 					<a href="https://github.com/kmpit" target="_blank">
 						<div class = "button" float = "left">
 							<h3>Github</h3>
