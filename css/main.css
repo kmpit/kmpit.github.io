@@ -8,7 +8,7 @@
 
 /*Text*/
 body {	font-family: "Pontano Sans";
-		font-size: 18px;
+		font-size: 20px;
 		color: #000000;
 		padding-bottom:1vw;
 		margin: 0; 
@@ -53,14 +53,16 @@ p {	margin-block-start: 0em;
 div.wrapper {	width: 100%;
 				max-width: 100%;	}
 
-div.foreground {	position: absolute;
+div.foreground {	
+	
+	position: absolute;
 
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 
-	padding: 0;
+	/* padding: 5em; */
 	text-align: center; }
 	
 div.column_third {	float: left;
@@ -122,27 +124,31 @@ div.button.menu_button:hover {
 	background-color: white;	}
 div.button.menu_button:hover >h3 {
 	color: #a4a7ae;	}
+/* div.button.menu_button:active >h3 {
+	text-decoration: underline;
+}
+div.button.menu_button:active {
+	text-decoration: underline;
+} */
 
 div.nav_menu { 
-	color:purple;
 	height: 0; /*changes with JS */
 	overflow-y: hidden;
 	transition: height 0.2s ease-out;
+	text-align:right;
 }
-div.nav_menu > h3 { 
-	text-align: right;
-	margin-right: 10px;
-	margin-top: 0.5em;
-}
-div.nav_menu > h3 > span {
-	background-color:#a4a7ae;
-}
+div.button.menu_button.option {
+	float:right;
+	clear:both;
+	margin-top:0.2em; }
 
 
 div.titleblock { 	max-width:100%;
 					width:100%;
 
 					height:700px;
+
+					text-align: center;
 		
 					background-image: url("../images/porch-2.jpg");
 
@@ -150,6 +156,10 @@ div.titleblock { 	max-width:100%;
 					background-position: center;
 					background-repeat: no-repeat;
 					background-size: cover; 
+
+					position: relative;
+
+
 }
 
 div.titleblock_buttons {	display:inline-block;
@@ -183,7 +193,7 @@ img {	width: 100%;
 
 @media only screen and (max-device-width: 1366px) {
 	body {
-		/* font-size: 20px; */
+		font-size: 20px;
 	}
 	h1 {
 		font-size:2.5em;
@@ -192,15 +202,23 @@ img {	width: 100%;
 	  background-attachment: scroll;
 	}
 }
-/* 
-@media only screen and (orientation: landscape) {
-	body {
-		font-size: 20px;
-	}
+
+@media only screen and (max-device-width: 1366px) and (orientation: landscape){
 	h1 {
 		font-size:2em;
-	
-} */
+	}
+	div.titleblock {
+		max-height: 100vh;
+	}
+}
+
+@media only screen and (max-device-width: 1366px) and (orientation: portrait){
+	div.button.menu_button.option {
+		float:none;
+		clear:none;
+		margin-top:0.2em; 
+	}
+}
 
 @viewport {
 	width: device-width ;

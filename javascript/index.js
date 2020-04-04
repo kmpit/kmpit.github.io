@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function onInit(){
     getCurrentTerm(); 
+
+    var foreground = document.getElementById("foreground");
+    console.log (document.getElementById("titleblock").contains(foreground));
+    
 }
 
 function getCurrentTerm(){
