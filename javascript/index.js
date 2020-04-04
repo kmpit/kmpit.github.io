@@ -36,12 +36,13 @@ function getCurrentTerm(){
 document.addEventListener("click", function(event) {
     console.log('event listern fired');
     // check that sidebar is opened
-    var width = parseInt(document.getElementById("sidebar").style.width);
-    console.log('wdith is', width);
-    if (width > 0 ){
+    var height = parseInt(document.getElementById("nav_menu").style.height);
+    // console.log('wdith is', width);
+    if (height > 0 ){
         console.log('got into the cmd');
+        console.log(event.target.closest);
         // If user clicks inside the sidebar, do nothing
-        if (event.target.closest(".sidebar")) {
+        if (event.target.closest(".nav_menu")) {
             return;
         }
         // If user is just opening the sidebar
@@ -55,9 +56,9 @@ document.addEventListener("click", function(event) {
      }
 });
 
-function sidebarOnClick(){
-    var sidebar_width = parseInt(document.getElementById("sidebar").style.width);
-    if (sidebar_width > 0 ){
+function navOnClick(){
+    var nav_height = parseInt(document.getElementById("nav_menu").style.height);
+    if (nav_height > 0 ){
         closeMenu();
         return;
     }
@@ -69,11 +70,11 @@ function sidebarOnClick(){
 
 // functions to close and open the sidebar
 function openMenu(){
-    document.getElementById("sidebar").style.width = "250px";
-    console.log('width is ', document.getElementById("sidebar").style.width);
+    document.getElementById("nav_menu").style.height = "200px";
+    // console.log('width is ', document.getElementById("nav_menu").style.width);
 }
 
 function closeMenu(){
     console.log('close menu called');
-    document.getElementById("sidebar").style.width = "0px";
+    document.getElementById("nav_menu").style.height = "0px";
 }

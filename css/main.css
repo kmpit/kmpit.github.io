@@ -55,9 +55,10 @@ div.wrapper {	width: 100%;
 
 div.foreground {	position: absolute;
 
-	top: 25%;
+	top: 50%;
 	left: 50%;
-	transform: translate(-50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 
 	padding: 0;
 	text-align: center; }
@@ -105,37 +106,38 @@ div.section_name {
 
 /*Page elements*/
 
-div.header_bar{
-	width:94%;
+div.sidebar{
+	position: fixed;
+	z-index:100; 
+	right:0;
 	text-align:right;
-	position:fixed;
-	z-index: 100;
-	padding:3%;
-
+	padding-right:1em;
+	padding-top:1em;
 }
 
 div.button.menu_button {
-	background-color: #cfd2d9; 
+	background-color: #a4a7ae; 
 	border-style:none; }
 div.button.menu_button:hover {
-		background-color: white;	}
+	background-color: white;	}
 div.button.menu_button:hover >h3 {
 	color: #a4a7ae;	}
 
-
-div.sidebar { 
+div.nav_menu { 
 	color:purple;
-	height: 100%; /* 100% Full-height */
-	width: 0; /* 0 width - change this with JavaScript */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Stay on top */
-	top: 0;
-	right: 0;
-	background-color: rgba(255, 255, 255, 0); /* Black*/
-	overflow-x: hidden; /* Disable horizontal scroll */
-	padding-top: 60px; /* Place content 60px from the top */
-	transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+	height: 0; /*changes with JS */
+	overflow-y: hidden;
+	transition: height 0.2s ease-out;
 }
+div.nav_menu > h3 { 
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 0.5em;
+}
+div.nav_menu > h3 > span {
+	background-color:#a4a7ae;
+}
+
 
 div.titleblock { 	max-width:100%;
 					width:100%;
@@ -148,8 +150,6 @@ div.titleblock { 	max-width:100%;
 					background-position: center;
 					background-repeat: no-repeat;
 					background-size: cover; 
-
-					/* padding: 3%; */
 }
 
 div.titleblock_buttons {	display:inline-block;
@@ -181,10 +181,9 @@ img {	width: 100%;
 		height: auto;
 		max-width: 100%; }
 
-/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
 	body {
-		font-size: 22px;
+		/* font-size: 20px; */
 	}
 	h1 {
 		font-size:2.5em;
@@ -193,6 +192,15 @@ img {	width: 100%;
 	  background-attachment: scroll;
 	}
 }
+/* 
+@media only screen and (orientation: landscape) {
+	body {
+		font-size: 20px;
+	}
+	h1 {
+		font-size:2em;
+	
+} */
 
 @viewport {
 	width: device-width ;
