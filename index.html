@@ -8,45 +8,65 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body onload = "onInit()">
 	<div class = "wrapper">
-		<div class = "sidebar">
+
+		<!--Menu-->
+		<div id = "sidebar">
 			<div class = "button menu_button" onclick="navOnClick()">
 				<h3>Menu</h3>
 			</div>
-			<div id = "nav_menu" class = "nav_menu">
+			<div id = "nav_menu">
 				<div class="button menu_button option"><h3>About</h3></div>
 				<div class="button menu_button option"><h3>Experience</h3></div>
 				<div class="button menu_button option"><h3>Projects</h3></div>
 				<div class="button menu_button option"><h3>Life</h3></div>
+				<div class="button menu_button option"><h3>Skills</h3></div>
 				<div class="button menu_button option"><h3>Contact</h3></div>
 			</div>
 		</div>
 
-		<!--Main section-->
-		<div class="titleblock" id = "titleblock" > 
-			<div class = "foreground" id="foreground"> 
+		<!--Main sections-->
+
+		<!--Page header-->
+		<div id = "titleblock" > 
+			<div id="foreground"> 
 				<header>
 					<h1>Kimberley Pita</h1>
-					<p id = 'current_term'></p>
-					<p>University of Waterloo</p>
+					<div class = "subtitle">
+						<p id = 'current_term'></p>
+						<p>University of Waterloo</p>
+					</div>
 				</header>
-				<div class = "titleblock_buttons">
-					<a href="https://github.com/kmpit" target="_blank">
-						<div class = "button" float = "left">
-							<h3>Github</h3>
-						</div>
-					</a>
-					<a href="https://www.linkedin.com/in/kimberley-pita/" target="_blank">
-						<div class = "button" float = "right">
-							<h3>LinkedIn</h3>
-						</div>
-					</a>
-				</div>
+				<a href="https://github.com/kmpit" target="_blank">
+					<div class = "button" float = "left">
+						<h3>Github</h3>
+					</div>
+				</a>
+				<a href="https://www.linkedin.com/in/kimberley-pita/" target="_blank">
+					<div class = "button" float = "right">
+						<h3>LinkedIn</h3>
+					</div>
+				</a>
 			</div>
 		</div>
+
+		<!--About-->
+		<div class="section_wrapper">
+			<div id = "aboutme_para" float = "left">
+				<h2> Hi! I'm Kim.</h2>
+				<p>I’m a UI/UX designer and front-end developer hungry to solve problems, 
+					help people, and learn cool stuff on a Fall 2020 internship. <br><br>
+					Let’s talk about what we can build together.
+				</p>
+			</div>
+			<div id = "aboutme_image" float = "right">
+				<img src = "./images/portrait-2.png">
+			</div>
+		</div>
+
 		
-		<!--Main sections-->
+		<!--
 		<div class = "section_name">
 			<h2>Skills</h2>
 		</div>
@@ -130,11 +150,11 @@
 					
 		<div class = "section_name">
 			<h2>Visual Art and Photography</h2>
-		</div>
+		</div>-->
 
 	
-	<!--instagram embed-->
-	<div class='embedsocial-instagram' data-ref="18b3fce8baeaa0797464af953864be1aea4313f2"></div>
+	<!-- instagram embed -->
+	<!-- <div class='embedsocial-instagram' data-ref="18b3fce8baeaa0797464af953864be1aea4313f2"></div>
 	<script>(function(d, s, id){
 			var js; 
 			if (d.getElementById(id)) {return;}
@@ -143,7 +163,7 @@
 			js.src = "https://embedsocial.com/embedscript/in.js"; 
 			d.getElementsByTagName("head")[0].appendChild(js);
 		}(document, "script", "EmbedSocialInstagramScript"));
-	</script>
+	</script>-->
 		
 	</div>
 	

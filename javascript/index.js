@@ -1,15 +1,17 @@
 
 // document.getElementById('date').innerHTML = new Date().toDateString();
 
-document.addEventListener("DOMContentLoaded", function() {
-    onInit();
-  });
+// document.addEventListener("DOMContentLoaded", function() {
+//     onInit();
+//     console.log('event listener fired');
+//   });
 
 function onInit(){
+    console.log('onInit called');
     getCurrentTerm(); 
 
-    var foreground = document.getElementById("foreground");
-    console.log (document.getElementById("titleblock").contains(foreground));
+    // var foreground = document.getElementById("foreground");
+    // console.log (document.getElementById("titleblock").contains(foreground));
     
 }
 
@@ -74,7 +76,7 @@ function navOnClick(){
 
 // functions to close and open the sidebar
 function openMenu(){
-    document.getElementById("nav_menu").style.height = "200px";
+    document.getElementById("nav_menu").style.height = "35vh";
     // console.log('width is ', document.getElementById("nav_menu").style.width);
 }
 
