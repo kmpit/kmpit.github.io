@@ -3,7 +3,7 @@
 <head>
     <title>Kimberley Pita</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-	<link rel="SHORTCUT ICON" HREF="images/Wow.png">
+	<link rel="SHORTCUT ICON" HREF="images/sky-icon.jpg">
 	<script async src="./javascript/index.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -14,50 +14,69 @@
 		<!--Menu-->
 		<div id = "sidebar">
 			<div class = "button menu_button" onclick="navOnClick()">
-				<h3>Menu</h3>
+				<h4>Menu</h4>
 			</div>
 			<div id = "nav_menu">
-				<div class="button menu_button option"><h3>About</h3></div>
-				<div class="button menu_button option"><h3>Experience</h3></div>
-				<div class="button menu_button option"><h3>Projects</h3></div>
-				<div class="button menu_button option"><h3>Life</h3></div>
-				<div class="button menu_button option"><h3>Skills</h3></div>
-				<div class="button menu_button option"><h3>Contact</h3></div>
+				<a href="#about">
+					<div class="button menu_button option"><h4>About</h4></div>
+				</a>
+				<a href="#experience_section">
+					<div class="button menu_button option"><h4>Experience</h4></div>
+				</a>
+				<a href="#project_section">
+					<div class="button menu_button option"><h4>Projects</h4></div>
+				</a>
+				<a href="#life">
+					<div class="button menu_button option"><h4>Life</h4></div>
+				</a>
+				<a href="#skills">
+					<div class="button menu_button option"><h4>Skills</h4></div>
+				</a>
+				<a href = "#footer">
+					<div class="button menu_button option"><h4>Contact</h4></div>
+				</a>
 			</div>
 		</div>
 
 		<!--Main sections-->
 
 		<!--Page header-->
-		<div id = "titleblock" > 
+		<div class = "section_break" id = "titleblock" > 
 			<div id="foreground"> 
 				<header>
-					<h1>Kimberley Pita</h1>
+					<div class = "bottom_border">
+						<h1>Kimberley Pita</h1>
+					</div>
 					<div class = "subtitle">
-						<p id = 'current_term'></p>
-						<p>University of Waterloo</p>
+						<p> 3A Systems Design Engineering, UW <br>
+							Designer • Developer</p>
+						<!-- <p id = 'current_term'></p> -->
 					</div>
 				</header>
 				<a href="https://github.com/kmpit" target="_blank">
 					<div class = "button" float = "left">
-						<h3>Github</h3>
+						<h4>Github</h4>
 					</div>
 				</a>
 				<a href="https://www.linkedin.com/in/kimberley-pita/" target="_blank">
 					<div class = "button" float = "right">
-						<h3>LinkedIn</h3>
+						<h4>LinkedIn</h4>
 					</div>
 				</a>
 			</div>
 		</div>
 
 		<!--About-->
-		<div class="section_wrapper">
+		<div class="section_wrapper" id = "about">
 			<div id = "aboutme_para" float = "left">
 				<h2> Hi! I'm Kim.</h2>
-				<p>I’m a UI/UX designer and front-end developer hungry to solve problems, 
-					help people, and learn cool stuff on a Fall 2020 internship. <br><br>
-					Let’s talk about what we can build together.
+				<p>I’m a UI/UX designer and front-end developer hungry to solve problems, help people, 
+					and learn cool stuff on a Fall 2020 internship.
+				 <br><br>
+					<a class="intext" href="#footer" >Let's talk</a> 
+					about what we can build together! Scroll down to see my 
+					past work or check out my 
+					<a class = "intext" href="./assets/Kim Pita - Resume.pdf" download target = "_blank">resume</a>. 
 				</p>
 			</div>
 			<div id = "aboutme_image" float = "right">
@@ -65,106 +84,289 @@
 			</div>
 		</div>
 
-		
-		<!--
-		<div class = "section_name">
-			<h2>Skills</h2>
-		</div>
-		<div class="row">
-			<div class="column_half">
-				<u1 class = "big"> 
-					<li>Proficient with C/C++, OOP, data structures</li>
-					<li>Self-taught HTML5, CSS; basic Python</li>
-					<li>Hands-on experience with digital and analog electronics and firmware</li>
-				</u1>
-			</div>
-			<div class="column_half">
-				<u1 class = "big"> 
-					<li>Rapid learner, tenacious problem-solver</li>
-					<li>Passionate about growing technical skills while leveraging in-depth UX background</li>
-					<li>Exceptional collaborator + communicator</li>
-				</u1>
-			</div>
-		</div>
+		<div class = "section_break" id = "break_1"></div>
 
-		<div class = "section_name">
+		<div class = "section_wrapper" id = "experience_section">
 			<h2>Experience</h2>
-		</div>
-		<div class="row">
-			<div class="column_third">
-				<h4> UX Research Coop </h4> 
-				<h5> PlanGrid  |  May - Aug 2019 </h5>
-				<u1 class ="small"> 
-					<li>Optimized product decisions via meaningful user research studies, leading studies from planning to implementation to presentation</li>
-					<li>Achieved stakeholder buy-in by communicating effectively with product, engineering, and design teams; leveraged both quantitative data (Looker, Amplitude) and qualitative evidence (user interviews, concept testing)</li>
-					<li>Implemented custom review system for product accessibility using WCAG framework and by collaborating with designers and developers</li>
-					<li>Stimulated communication and facilitated on-boarding with artifact mapping product functionalities and personas</li>
-				</u1>
-				
-				<h4> Counsellor</h4> 
-				<h5> Camp Scugog  |  Jul 2016 - Aug 2018</h5>
-				<u1 class ="small"> 
-					<li>Communicated clearly and patiently with campers (children & parents) and co-counsellors to empower campers for personal success and ensure accountability</li>
-					<li>Took initiative to lead activities, generate exciting opportunities, and address issues to optimize camp experience</li>
-					<li>Managed 7 young campers of varying abilities through on-the-spot critical analysis and confident decision-making</li>
-				</u1> 
-			</div>
-			<div class="column_third">
-				<h4> Digital Research Coop </h4> 
-				<h5> CIBC  |  Sep - Dec 2018 </h5>
-				<u1 class = "small"> 
-					<li>Tangibly influenced design directions with insightful findings and recommendations regarding conceptual, visual, interaction, and copy design of digital banking products</li>
-					<li>Developed, facilitated, and documented user tests, including live and remote interviews, usability tests, surveys, card sorts, first-click tests, and more</li>
-					<li>Backed results with detailed quantitative and qualitative analysis</li>
-					<li>Led and supported delivery to stakeholders, including formal presentation and report generation</li>
-					<li>Led Agile sprint activities and collaborated closely with peers of diverse competencies</li>
-				</u1>
-				
-				<h4> Grader </h4> 
-				<h5> Kumon  |  Nov 2015 - Jun 2017 </h5>
-				<u1 class = "small"> 
-					<li>Improved student understanding of math and English through targeted verbal feedback</li>
-					<li>Graded student work in accurate, detail-oriented manner in fast-paced, busy environment</li>
-				</u1>
-			</div>
-			<div class="column_third">
-				<h4> Training Development Specialist </h4> 
-				<h5> Enable Training  |  Jan - Apr 2018 </h5>
-				<u1 class = "small"> 
-					<li>Wrote and compiled interactive courseware for university electronics</li>
-					<li>Collaborated extensively to develop lab activities and multimedia teaching aids for engineering, coding, and circuitry</li>
-					<li>Tailored content for high-quality delivery using HTML5</li>
-				</u1>
-				
-				<h4> President </h4> 
-				<h5> Minors A Cappella  | Jan 2019 - present </h5>
-				<u1 class = "small"> 
-					<li>Led 20-person group to top 4 finish at 2019 ICCA Quarterfinals</li>
-					<li>Planned and executed 2 rounds of auditions with 100+ candidates in Fall 2019</li>
-					<li>Attracted 50+ new auditionees in Fall 2019 through social media and graphic design work</li>
-					<li>Orchestrate 5+ h of weekly rehearsal, ~10 performances per term</li>
-					<li>Resolve conflicts, coordinate key decisions, and manage professional relationships</li>
-				</u1>
-			</div>
-		</div>
-					
-		<div class = "section_name">
-			<h2>Visual Art and Photography</h2>
-		</div>-->
 
-	
-	<!-- instagram embed -->
-	<!-- <div class='embedsocial-instagram' data-ref="18b3fce8baeaa0797464af953864be1aea4313f2"></div>
-	<script>(function(d, s, id){
-			var js; 
-			if (d.getElementById(id)) {return;}
-			js = d.createElement(s); 
-			js.id = id; 
-			js.src = "https://embedsocial.com/embedscript/in.js"; 
-			d.getElementsByTagName("head")[0].appendChild(js);
-		}(document, "script", "EmbedSocialInstagramScript"));
-	</script>-->
+			<div id = "experience_list" class = "side_list">
+				<div id = "Avidbots" class = "list_item selected" onclick = "openDisplay(this, 'experience')">
+					<h3>DevOps and QA Lead</h3>
+					<h4>Avidbots | Jan - Apr 2020 </h4>
+				</div>
+				<div id = "PlanGrid" class = "list_item" onclick = "openDisplay(this, 'experience')">
+					<h3>UX Research</h3>
+					<h4>PlanGrid | May - Aug 2019 </h4>
+				</div>
+				<div id = "CIBC" class = "list_item" onclick = "openDisplay(this, 'experience')">
+					<h3>UX Research</h3>
+					<h4>CIBC | Sep - Dec 2018 </h4>
+				</div>
+				<div id = "Enable" class = "list_item" onclick = "openDisplay(this, 'experience_display')">
+					<h3>Training Development</h3>
+					<h4>Enable Education | Jan - Apr 2018 </h4>
+				</div>
+				<div id = "camp" class = "list_item" onclick = "openDisplay(this, 'experience_display')">
+					<h3>Counsellor</h3>
+					<h4>Camp Scugog | Jul 2016 - Aug 2018 </h4>
+				</div>
+				<div id = "Kumon" class = "list_item" onclick = "openDisplay(this, 'experience_display')">
+					<h3>Grader</h3>
+					<h4>Kumon | Nov 2015 - Jun 2017</h4>
+				</div>
+			</div>
+
+			<div id = "experience_display" class = "item_display">
+				<div id = "Avidbots_content">
+					<p> I love to sing, play the flute, and write original songs!
+						At school, my passion for music and performance led me to join the 
+						<a class = "intext" 
+							href = "https://www.youtube.com/user/unaccompaniedminoruw" 
+							target = "_blank"
+							SameSite = "none"
+							secure>
+							Unaccompanied Minors,</a> 
+						a competitive a cappella group. 
+					<p> I've even served multiple terms as the group's President, 
+						during which I attracted record numbers of auditionees, doubled event attendance,
+						and revamped cumbersome admin processes. 
+					</p>
+					<img class = "multiple" id = "music_img" src = "./images/busking.jpg">
+					<img class = "multiple" id = "music_img" src = "./images/bluewine.jpg">
+					<p>In Winter 2020, the Unaccompanied Minors made history by placing runner-up at the ICCA Quarterfinals 
+						after only 6 weeks of rehearsal!
+					</p>
+					<div class = "video_container">
+						<iframe 
+							class = "video_embed" 
+							src="https://www.youtube.com/embed/mz0pqmlGvfw?"
+							frameborder = "0"
+							allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen	>
+						</iframe>
+					</div>
+				</div>
+
+				<div id = "PlanGrid_content">
+					<p> Hand in hand with my love for design is a love for visual art. 
+						I pursue art in my spare time, creating pieces for fun and to give as gifts. 
+						I also love to take photos of nature (all the pics on this site, unless otherwise credited, are mine!).					
+					</p>
+					<p>
+						Check out some of my work on 
+						<a class = "intext"
+							href = "https://www.instagram.com/nim_chimpsky_fan_account/"
+							target = "_blank"> 
+							Instagram:</a> 
+					</p>
+					<!-- SnapWidget -->
+						<script src="https://snapwidget.com/js/snapwidget.js"></script>
+						<iframe src="https://snapwidget.com/embed/815211" 
+								class="snapwidget-widget" 
+								allowtransparency="true" 
+								frameborder="0" 
+								scrolling="no" 
+								style="border:none; overflow:hidden;  width:100%; ">
+						</iframe>
+						<!-- <p> add some pics. should the zine go here or in projects ? </p> -->
+				</div>
+
+				<div id = "CIBC_content">
+					<p>In the remainder of my spare time, I love to jog, play ultimate frisbee, 
+						and walk the family dogs: Boo, Lucie, and Franklin. 
+					</p>
+					<div>
+						<img class = "multiple" id = "more_img" src = "./images/boo.jpg">
+						<img class = "multiple" id = "more_img" src = "./images/lucie.jpg">
+						<img class = "multiple" id = "more_img" src = "./images/franklin.jpg">
+					</div>
+					<p>I'm also a big nerd who enjoys reading! Right now, I'm particularly into science fiction and historical fiction.
+						We can be friends on 
+						<a class = "intext"
+							href = "https://www.goodreads.com/user/show/113466171-k-pi"
+							target = "_blank">
+							Goodreads!</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class = "section_break" id = "break_2"></div>
 		
+		<div class = "section_wrapper" id = "project_section" >
+			<h2>Projects</h2>
+			<div id="card_container"></div>
+		</div>
+
+		<div class = "section_break" id = "break_3"></div>
+
+		<div class = "section_wrapper" id = "life">
+			<h2>Life</h2>
+
+			<div id = "life_list" class = "side_list">
+				<div id = "music" class = "list_item selected" onclick = "openDisplay(this, 'life')">
+					<h3>Music</h3>
+				</div>
+				<div id = "art" class = "list_item" onclick = "openDisplay(this, 'life')">
+					<h3>Art</h3>
+				</div>
+				<div id = "more" class = "list_item" onclick = "openDisplay(this, 'life')">
+					<h3>More!</h3>
+				</div>
+			</div>
+
+			<div id = "life_display" class = "item_display">
+				<div id = "music_content">
+					<p> I love to sing, play the flute, and write original songs!
+						At school, my passion for music and performance led me to join the 
+						<a class = "intext" 
+							href = "https://www.youtube.com/user/unaccompaniedminoruw" 
+							target = "_blank"
+							SameSite = "none"
+							secure>
+							Unaccompanied Minors,</a> 
+						a competitive a cappella group. 
+					<p> I've even served multiple terms as the group's President, 
+						during which I attracted record numbers of auditionees, doubled event attendance,
+						and revamped cumbersome admin processes. 
+					</p>
+					<img class = "multiple" id = "music_img" src = "./images/busking.jpg">
+					<img class = "multiple" id = "music_img" src = "./images/bluewine.jpg">
+					<p>In Winter 2020, the Unaccompanied Minors made history by placing runner-up at the ICCA Quarterfinals 
+						after only 6 weeks of rehearsal!
+					</p>
+					<div class = "video_container">
+						<iframe 
+							class = "video_embed" 
+							src="https://www.youtube.com/embed/mz0pqmlGvfw?"
+							frameborder = "0"
+							allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen	>
+						</iframe>
+					</div>
+				</div>
+
+				<div id = "art_content">
+					<p> Hand in hand with my love for design is a love for visual art. 
+						I pursue art in my spare time, creating pieces for fun and to give as gifts. 
+						I also love to take photos of nature (all the pics on this site, unless otherwise credited, are mine!).					
+					</p>
+					<p>
+						Check out some of my work on 
+						<a class = "intext"
+							href = "https://www.instagram.com/nim_chimpsky_fan_account/"
+							target = "_blank"> 
+							Instagram:</a> 
+					</p>
+					<!-- SnapWidget -->
+						<script src="https://snapwidget.com/js/snapwidget.js"></script>
+						<iframe src="https://snapwidget.com/embed/815211" 
+								class="snapwidget-widget" 
+								allowtransparency="true" 
+								frameborder="0" 
+								scrolling="no" 
+								style="border:none; overflow:hidden;  width:100%; ">
+						</iframe>
+						<!-- <p> add some pics. should the zine go here or in projects ? </p> -->
+				</div>
+
+				<div id = "more_content">
+					<p>In the remainder of my spare time, I love to jog, play ultimate frisbee, 
+						and walk the family dogs: Boo, Lucie, and Franklin. 
+					</p>
+					<div>
+						<img class = "multiple" id = "more_img" src = "./images/boo.jpg">
+						<img class = "multiple" id = "more_img" src = "./images/lucie.jpg">
+						<img class = "multiple" id = "more_img" src = "./images/franklin.jpg">
+					</div>
+					<p>I'm also a big nerd who enjoys reading! Right now, I'm particularly into science fiction and historical fiction.
+						We can be friends on 
+						<a class = "intext"
+							href = "https://www.goodreads.com/user/show/113466171-k-pi"
+							target = "_blank">
+							Goodreads!</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class = "section_break" id = "break_4"></div>
+			
+		<div class="section_wrapper" id = "skills">
+			<h2>Skills</h2>
+			<table>
+				<tr>
+					<td class = "left_column">
+						<h4>Dev</h4>
+					</td>
+					<td>
+						<div>
+							<p><b>Frontend development </b> HTML • CSS • JavaScript • Typescript • Angular • Material • i18n</p>
+							<p><b>Object-oriented programming </b> C/C++ • Python</p>
+							<p><b>Scrum leadership </b> Agile • JIRA • Confluence</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class = "left_column">
+						<h4>UX/UI Design + Research</h4>
+					</td>
+					<td>
+						<div>
+							<p><b>UX/UI design </b>Iterative, systems-based design process</p>
+							<p><b>User research </b> User interviews • Usability testing • Concept testing • 
+								Qual/quant data analysis • Looker • Tableau</p>
+							<p><b>Wireframing </b>Figma • InVision  |  <b>Graphic design</b></p>
+							<p><b>Design communication </b>Design workshops • Report creation and presentation • Initiative planning</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class = "left_column">
+						<h4>DevOps</h4>
+					</td>
+					<td>
+						<div>
+							<p><b>Environment management </b> Shell scripting • Docker • Kubernetes </p>
+							<p><b>CI unit testing </b> Karma • Jasmine</p>
+							<p><b>QA + regression testing  |  CORS</b></p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class = "left_column">
+						<h4>Electro-mechanical</h4>
+					</td>
+					<td>
+						<div>
+							<p><b>Analog + digital circuit design </b> Signal processing + filtering • Arduino • Breadboarding • MIPS</p>
+							<p><b>3D design + technical drafting </b> SolidWorks • AutoCAD • 3D Printing</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id = "footer">
+			<h2>Let's talk!</h2>
+			<p>Ready to do great things together? Shoot me en email!
+			<br>You can also check out my work below, or view my resume
+				<a class = "intext" href="./assets/Kim Pita - Resume.pdf" download target = "_blank">here</a>.
+			</p>
+			<a href="mailto:kmpita@uwaterloo.ca" target="_blank">
+				<img class="logo" src = "./images/email.png"></img>
+			</a>
+			<a href="https://linkedin.com/in/kimberley-pita" target="_blank">
+				<img class="logo" src = "./images/LinkedIn.png"></img>
+			</a>
+			<a href="https://github.com/kmpit" target="_blank">
+				<img class="logo" src = "./images/Github.png"></img>
+			</a>
+			<a href="https://www.instagram.com/nim_chimpsky_fan_account/" target="_blank">
+				<img class="logo" src = "./images/Insta.jpg"></img>
+			</a>
+		</div>
+
 	</div>
 	
 	
