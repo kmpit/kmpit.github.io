@@ -44,7 +44,7 @@
 		<div class = "section_break" id = "titleblock" > 
 			<div id="foreground"> 
 				<header>
-					<div class = "bottom_border">
+					<div class = "souslined">
 						<h1>Kimberley Pita</h1>
 					</div>
 					<div class = "subtitle">
@@ -74,8 +74,8 @@
 					and learn cool stuff on a Fall 2020 internship.
 				 <br><br>
 					<a class="intext" href="#footer" >Let's talk</a> 
-					about what we can build together! Scroll down to see my 
-					past work or check out my 
+					about what we can build together! Scroll down to check out my experience, past work, and skills, 
+					or check out my 
 					<a class = "intext" href="./assets/Kim Pita - Resume.pdf" download target = "_blank">resume</a>. 
 				</p>
 			</div>
@@ -102,91 +102,139 @@
 					<h3>UX Research</h3>
 					<h4>CIBC | Sep - Dec 2018 </h4>
 				</div>
-				<div id = "Enable" class = "list_item" onclick = "openDisplay(this, 'experience_display')">
+				<div id = "Enable" class = "list_item" onclick = "openDisplay(this, 'experience')">
 					<h3>Training Development</h3>
 					<h4>Enable Education | Jan - Apr 2018 </h4>
 				</div>
-				<div id = "camp" class = "list_item" onclick = "openDisplay(this, 'experience_display')">
+				<div id = "camp" class = "list_item" onclick = "openDisplay(this, 'experience')">
 					<h3>Counsellor</h3>
 					<h4>Camp Scugog | Jul 2016 - Aug 2018 </h4>
 				</div>
-				<div id = "Kumon" class = "list_item" onclick = "openDisplay(this, 'experience_display')">
+				<div id = "Kumon" class = "list_item last" onclick = "openDisplay(this, 'experience')">
 					<h3>Grader</h3>
 					<h4>Kumon | Nov 2015 - Jun 2017</h4>
 				</div>
 			</div>
 
-			<div id = "experience_display" class = "item_display">
-				<div id = "Avidbots_content">
-					<p> I love to sing, play the flute, and write original songs!
-						At school, my passion for music and performance led me to join the 
-						<a class = "intext" 
-							href = "https://www.youtube.com/user/unaccompaniedminoruw" 
-							target = "_blank"
-							SameSite = "none"
-							secure>
-							Unaccompanied Minors,</a> 
-						a competitive a cappella group. 
-					<p> I've even served multiple terms as the group's President, 
-						during which I attracted record numbers of auditionees, doubled event attendance,
-						and revamped cumbersome admin processes. 
-					</p>
-					<img class = "multiple" id = "music_img" src = "./images/busking.jpg">
-					<img class = "multiple" id = "music_img" src = "./images/bluewine.jpg">
-					<p>In Winter 2020, the Unaccompanied Minors made history by placing runner-up at the ICCA Quarterfinals 
-						after only 6 weeks of rehearsal!
-					</p>
-					<div class = "video_container">
-						<iframe 
-							class = "video_embed" 
-							src="https://www.youtube.com/embed/mz0pqmlGvfw?"
-							frameborder = "0"
-							allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen	>
-						</iframe>
-					</div>
-				</div>
+			<div class = "page_indicator" id = "exp_page_indicator">
+				<div class = "circle selected" onclick = "circleClick(0)"></div>
+				<div class = "circle" onclick = "circleClick(1)"></div>
+				<div class = "circle" onclick = "circleClick(2)"></div>
+				<div class = "circle" onclick = "circleClick(3)"></div>
+				<div class = "circle" onclick = "circleClick(4)"></div>
+				<div class = "circle" onclick = "circleClick(5)"></div>
 
-				<div id = "PlanGrid_content">
-					<p> Hand in hand with my love for design is a love for visual art. 
-						I pursue art in my spare time, creating pieces for fun and to give as gifts. 
-						I also love to take photos of nature (all the pics on this site, unless otherwise credited, are mine!).					
-					</p>
-					<p>
-						Check out some of my work on 
+			</div>
+
+			<div id = "experience_display" class = "display">
+				<div id = "Avidbots_content" class = "display_item">
+					<p>This past term, I joined the web team at 
 						<a class = "intext"
-							href = "https://www.instagram.com/nim_chimpsky_fan_account/"
+							href = "https://www.avidbots.com/"
 							target = "_blank"> 
-							Instagram:</a> 
-					</p>
-					<!-- SnapWidget -->
-						<script src="https://snapwidget.com/js/snapwidget.js"></script>
-						<iframe src="https://snapwidget.com/embed/815211" 
-								class="snapwidget-widget" 
-								allowtransparency="true" 
-								frameborder="0" 
-								scrolling="no" 
-								style="border:none; overflow:hidden;  width:100%; ">
-						</iframe>
-						<!-- <p> add some pics. should the zine go here or in projects ? </p> -->
+							Avidbots</a>
+						and learned a lot while also making a big impact:</p>
+					<ul>
+						<li>Streamlined environment configuration process, decreasing manual steps from 22 to 8</li>
+						<li>Sped up unit tests more than 200% using parallelization, new libraries, CSS techniques</li>
+						<li>Further improved dev experience and code functionality by configuring cross-origin access, updating Angular versions</li>
+						<li>Uncovered numerous bugs; played major role coordinating with developers and product managers to ensure 
+							prompt resolution </li>
+						<li>Took initiative to improve the site by fixing bugs and deficiencies firsthand</li>
+						<li>Led successful two-week sprint as Agile scrum master and meeting director</li>						
+					</ul>
+
+					
+				
 				</div>
 
-				<div id = "CIBC_content">
-					<p>In the remainder of my spare time, I love to jog, play ultimate frisbee, 
-						and walk the family dogs: Boo, Lucie, and Franklin. 
-					</p>
-					<div>
-						<img class = "multiple" id = "more_img" src = "./images/boo.jpg">
-						<img class = "multiple" id = "more_img" src = "./images/lucie.jpg">
-						<img class = "multiple" id = "more_img" src = "./images/franklin.jpg">
-					</div>
-					<p>I'm also a big nerd who enjoys reading! Right now, I'm particularly into science fiction and historical fiction.
-						We can be friends on 
+				<div id = "PlanGrid_content" class = "display_item">
+					<p> In 2019, I headed to San Francisco to join the Design organization at 
 						<a class = "intext"
-							href = "https://www.goodreads.com/user/show/113466171-k-pi"
-							target = "_blank">
-							Goodreads!</a>
+							href = "https://www.plangrid.com/"
+							target = "_blank"> 
+							PlanGrid</a>, where I:
 					</p>
+					<ul>
+						<li>Headed major user research studies that heavily informed design/product decisions</li>
+						<li>Developed project plans, led interviews/concept tests, built 
+							<a class = "intext"
+								href = "https://theblog.adobe.com/putting-personas-to-work-in-ux-design-what-they-are-and-why-theyre-important/"
+								target = "_blank">
+							personas</a> 
+						and concept maps </li>
+						<li>Generated actionable findings by consolidating primary and secondary research, data analysis (
+							<a class = "intext"
+								href = "https://looker.com/platform/overview"
+								target = "_blank">
+								Looker</a>, 
+							<a class = "intext"
+								href = "https://amplitude.com/behavioral-analytics-platform"
+								target = "_blank">
+								Amplitude</a>)</li>
+						<li>Achieved stakeholder buy-in with compelling reports and presentations</li>
+						<li>Expedited front-end accessibility compliance with new review system for designers + devs</li>
+					</ul>
+					<img class = "side_by_side half" src = "./images/planthunt.jpg">
+					<img class = "side_by_side half"  src = "./images/museum.jpg">
+
+				</div>
+
+				<div id = "CIBC_content" class = "display_item">
+					<p>In my first UX-focused position, I made a splash at the CIBC digital banking department:</p>
+					<ul>
+						<li>Improved design through insights from usability tests, interviews, surveys, first-click tests, and more</li>
+						<li>Synthesized data and delivered concise recommendations in stakeholder reports and presentations</li> 
+						<li>Collaborated effortlessly with diverse teams, leading dynamic sprint workshops 
+							(e.g. research alignment, personas)</li>
+						<li>Established use cases for new products through market research, quantitative analysis 
+							(<a class = "intext" 
+								href = "https://www.tableau.com/products/cloud-bi"
+								target = "_blank">Tableau</a>, Excel)</li>
+					</ul>
+				</div>
+
+				<div id = "Enable_content" class = "display_item">
+					<p>After just one term of school, I landed my first coop position!</p>
+					<ul>
+						<li>Produced interactive courseware and lab activities for 3+ university-level electronics courses, 
+							delivered to multinational clients such as
+							<a class = "intext"
+								href = "https://www.ni.com/en-ca.html"
+								target = "_blank">
+							National Instruments</a></li>
+						<li>Collaboratively generated creative multimedia teaching aids for engineering and coding</li> 
+						<li>Tailored content using HTML5 to match clients' brand standards and streamline design</li>
+						<li> ADD A PICTURE</li>
+					</ul>
+				</div>
+
+				<div id = "camp_content" class = "display_item">
+					<p>
+						<a class = "intext"
+							href = "https://campscugog.org/"
+							target = "_blank">
+							Overnight camp</a>
+						is a fast-paced environment where the days are long, the possibilities are endless, and the staff work hard:  </p>
+					<ul>
+						<li>Took initiative to lead new activities, address issues, improve everyday processes</li>
+						<li>Managed 7 campers with unique needs through prompt critical thinking, confident decision-making, and empathetic communication</li> 
+						<li>Ensured accountability and camper success through close partnership with fellow staff, parents</li>
+					</ul>
+					<img class = "single" src = "./images/camp.jpg">
+				</div>
+
+				<div id = "Kumon_content" class = "display_item">
+					<p>As a grader at a 
+						<a class = "intext"
+							href = "https://www.kumon.com/ca-en/"
+							target = "_blank">
+							Kumon</a> 
+						tutoring centre, I multi-tasked, juggled competing priorities, and ultimately: </p>
+					<ul>
+						<li>Improved student understanding of math and English through targeted verbal/written feedback</li>
+						<li>Graded student work accurately, rapidly, and neatly with a keen eye for detail</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -203,7 +251,128 @@
 		<div class = "section_wrapper" id = "life">
 			<h2>Life</h2>
 
-			<div id = "life_list" class = "side_list">
+			<table >
+				<tr>
+					<td class = "wide">
+						<h3>Music</h3>
+						<p> I love to sing, play the flute, and write original songs!
+							I'm also part of the 
+							<a class = "intext" 
+								href = "https://www.youtube.com/user/unaccompaniedminoruw" 
+								target = "_blank"
+								SameSite = "none"
+								secure>
+								Unaccompanied Minors,</a> 
+							a competitive a cappella group. 
+							I've even served multiple terms as the group's President, 
+							during which I doubled event attendance	and revamped cumbersome admin processes. 
+						</p>
+					</td>
+					<td class = "narrow">
+						<img src = "./images/busking.jpg">
+						<!-- <img src = "./images/bluewine.jpg"> -->
+					</td>
+				</tr>
+				<tr>
+					<td class = "wide">
+						<h3>Art</h3>
+						<p> Hand in hand with my love for design is a love for visual art; 
+							it's a way to de-stress, to capture to the world, and to show appreciation for loved ones.  			
+							Check out my work on 
+							<a class = "intext"
+								href = "https://www.instagram.com/nim_chimpsky_fan_account/"
+								target = "_blank"> 
+								Instagram:</a> 
+						</p>
+					</td>
+					<td class = "narrow">
+						<script src="https://snapwidget.com/js/snapwidget.js"></script>
+						<iframe src="https://snapwidget.com/embed/815211" 
+							class="snapwidget-widget" 
+							allowtransparency="true" 
+							frameborder="0" 
+							scrolling="no" >
+						</iframe>	
+					</td>
+				</tr>
+				<tr>
+					<td class = "wide">
+						<h3>Etc.</h3>
+						<p>I keep active by jogging and by walking the family dogs: Boo, Lucie, and Franklin. 
+						<br>I also love to read - take a look at my
+							<a class = "intext"
+								href = "https://www.goodreads.com/user/show/113466171-k-pi"
+								target = "_blank">
+								Goodreads</a>
+								to see if we have any favourite books in common!
+						</p>
+					</td>
+					<td class = "narrow">
+							<img class = "side_by_side third"  src = "./images/boo-2.jpg">
+							<img class = "side_by_side third"  src = "./images/lucie-2.jpg">
+							<img class = "side_by_side third"  src = "./images/franklin-2.jpg">
+					</td>
+				</tr>
+			</table>
+
+			<!-- <div class = "column first">
+				<h3>Art</h3>
+				<p> Hand in hand with my love for design is a love for visual art; 
+					it's a way to de-stress, to capture to the world, and to show appreciation for loved ones.  			
+					Check out my work on 
+					<a class = "intext"
+						href = "https://www.instagram.com/nim_chimpsky_fan_account/"
+						target = "_blank"> 
+						Instagram:</a> 
+				</p>
+				<script src="https://snapwidget.com/js/snapwidget.js"></script>
+				<iframe src="https://snapwidget.com/embed/815211" 
+						class="snapwidget-widget" 
+						allowtransparency="true" 
+						frameborder="0" 
+						scrolling="no" >
+				</iframe>				
+			</div>
+
+			<div class = "column">
+				<h3>Music</h3>
+				<p> I love to sing, play the flute, and write original songs!
+					I'm also part of the 
+					<a class = "intext" 
+						href = "https://www.youtube.com/user/unaccompaniedminoruw" 
+						target = "_blank"
+						SameSite = "none"
+						secure>
+						Unaccompanied Minors,</a> 
+					a competitive a cappella group. </p>
+
+					<img class = "side_by_side half" src = "./images/busking.jpg">
+					<img class = "side_by_side half"  src = "./images/bluewine.jpg">
+
+				<p>	I've even served multiple terms as the group's President, 
+					during which I doubled event attendance	and revamped cumbersome admin processes. 
+				</p>
+
+
+				<h3>Etc.</h3>
+				<p>I keep active by jogging and by walking the family dogs: Boo, Lucie, and Franklin. 
+				<br>I also love to read - take a look at my
+					<a class = "intext"
+						href = "https://www.goodreads.com/user/show/113466171-k-pi"
+						target = "_blank">
+						Goodreads</a>
+						to see if we have any favourite books in common.
+				</p>
+				<div>
+					<img class = "side_by_side third"  src = "./images/boo.jpg">
+					<img class = "side_by_side third"  src = "./images/lucie.jpg">
+					<img class = "side_by_side third"  src = "./images/franklin.jpg">
+				</div>
+
+			</div> -->
+
+
+			<!-- <div id = "life_list" class = "side_list">
 				<div id = "music" class = "list_item selected" onclick = "openDisplay(this, 'life')">
 					<h3>Music</h3>
 				</div>
@@ -215,10 +384,10 @@
 				</div>
 			</div>
 
-			<div id = "life_display" class = "item_display">
-				<div id = "music_content">
+			<div id = "life_display" class = "display">
+				<div id = "music_content" class = "display_item">
 					<p> I love to sing, play the flute, and write original songs!
-						At school, my passion for music and performance led me to join the 
+						My passion for music and performance led me to join the 
 						<a class = "intext" 
 							href = "https://www.youtube.com/user/unaccompaniedminoruw" 
 							target = "_blank"
@@ -230,8 +399,8 @@
 						during which I attracted record numbers of auditionees, doubled event attendance,
 						and revamped cumbersome admin processes. 
 					</p>
-					<img class = "multiple" id = "music_img" src = "./images/busking.jpg">
-					<img class = "multiple" id = "music_img" src = "./images/bluewine.jpg">
+					<img class = "side_by_side half" src = "./images/busking.jpg">
+					<img class = "side_by_side half"  src = "./images/bluewine.jpg">
 					<p>In Winter 2020, the Unaccompanied Minors made history by placing runner-up at the ICCA Quarterfinals 
 						after only 6 weeks of rehearsal!
 					</p>
@@ -246,10 +415,10 @@
 					</div>
 				</div>
 
-				<div id = "art_content">
+				<div id = "art_content" class = "display_item">
 					<p> Hand in hand with my love for design is a love for visual art. 
-						I pursue art in my spare time, creating pieces for fun and to give as gifts. 
-						I also love to take photos of nature (all the pics on this site, unless otherwise credited, are mine!).					
+						I pursue art in my spare time, creating pieces for fun and to give as gifts, 
+						and take photos of things that make me happy.				
 					</p>
 					<p>
 						Check out some of my work on 
@@ -258,36 +427,30 @@
 							target = "_blank"> 
 							Instagram:</a> 
 					</p>
-					<!-- SnapWidget -->
 						<script src="https://snapwidget.com/js/snapwidget.js"></script>
 						<iframe src="https://snapwidget.com/embed/815211" 
 								class="snapwidget-widget" 
 								allowtransparency="true" 
 								frameborder="0" 
-								scrolling="no" 
-								style="border:none; overflow:hidden;  width:100%; ">
+								scrolling="no" >
 						</iframe>
-						<!-- <p> add some pics. should the zine go here or in projects ? </p> -->
 				</div>
 
-				<div id = "more_content">
-					<p>In the remainder of my spare time, I love to jog, play ultimate frisbee, 
-						and walk the family dogs: Boo, Lucie, and Franklin. 
+				<div id = "more_content" class = "display_item">
+					<p>I keep active by jogging and by walking the family dogs: Boo, Lucie, and Franklin. 
 					</p>
-					<div>
-						<img class = "multiple" id = "more_img" src = "./images/boo.jpg">
-						<img class = "multiple" id = "more_img" src = "./images/lucie.jpg">
-						<img class = "multiple" id = "more_img" src = "./images/franklin.jpg">
-					</div>
-					<p>I'm also a big nerd who enjoys reading! Right now, I'm particularly into science fiction and historical fiction.
-						We can be friends on 
+					<p>I also love to read - take a look at my
 						<a class = "intext"
 							href = "https://www.goodreads.com/user/show/113466171-k-pi"
 							target = "_blank">
-							Goodreads!</a>
+							Goodreads</a>
+							to see if we have any favourite books in common.
 					</p>
+						<img class = "side_by_side third"  src = "./images/boo.jpg">
+						<img class = "side_by_side third"  src = "./images/lucie.jpg">
+						<img class = "side_by_side third"  src = "./images/franklin.jpg">
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 		<div class = "section_break" id = "break_4"></div>
@@ -296,7 +459,7 @@
 			<h2>Skills</h2>
 			<table>
 				<tr>
-					<td class = "left_column">
+					<td class = "right">
 						<h4>Dev</h4>
 					</td>
 					<td>
@@ -308,7 +471,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td class = "left_column">
+					<td class = "right">
 						<h4>UX/UI Design + Research</h4>
 					</td>
 					<td>
@@ -317,12 +480,12 @@
 							<p><b>User research </b> User interviews • Usability testing • Concept testing • 
 								Qual/quant data analysis • Looker • Tableau</p>
 							<p><b>Wireframing </b>Figma • InVision  |  <b>Graphic design</b></p>
-							<p><b>Design communication </b>Design workshops • Report creation and presentation • Initiative planning</p>
+							<p><b>Design communication </b>Design workshops • Personas • Concept Maps • Report creation and presentation • Initiative planning</p>
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td class = "left_column">
+					<td class = "right">
 						<h4>DevOps</h4>
 					</td>
 					<td>
@@ -334,7 +497,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td class = "left_column">
+					<td class = "right">
 						<h4>Electro-mechanical</h4>
 					</td>
 					<td>
@@ -363,7 +526,7 @@
 				<img class="logo" src = "./images/Github.png"></img>
 			</a>
 			<a href="https://www.instagram.com/nim_chimpsky_fan_account/" target="_blank">
-				<img class="logo" src = "./images/Insta.jpg"></img>
+				<img class="logo" src = "./images/insta.png"></img>
 			</a>
 		</div>
 
