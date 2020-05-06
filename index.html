@@ -17,22 +17,22 @@
 				<h4>Menu</h4>
 			</div>
 			<div id = "nav_menu">
-				<a href="#about">
+				<a href="#about" onClick = "closeMenu()">
 					<div class="button menu_button option"><h4>About</h4></div>
 				</a>
-				<a href="#experience_section">
+				<a href="#experience_section" onClick = "closeMenu()">
 					<div class="button menu_button option"><h4>Experience</h4></div>
 				</a>
-				<a href="#project_section">
+				<a href="#project_section" onClick = "closeMenu()">
 					<div class="button menu_button option"><h4>Projects</h4></div>
 				</a>
-				<a href="#life">
+				<a href="#life" onClick = "closeMenu()">
 					<div class="button menu_button option"><h4>Life</h4></div>
 				</a>
-				<a href="#skills">
+				<a href="#skills" onClick = "closeMenu()">
 					<div class="button menu_button option"><h4>Skills</h4></div>
 				</a>
-				<a href = "#footer">
+				<a href = "#footer" onClick = "closeMenu()">
 					<div class="button menu_button option"><h4>Contact</h4></div>
 				</a>
 			</div>
@@ -42,28 +42,34 @@
 
 		<!--Page header-->
 		<div class = "section_break" id = "titleblock" > 
-			<div id="foreground"> 
-				<header>
-					<div class = "souslined">
-						<h1>Kimberley Pita</h1>
-					</div>
-					<div class = "subtitle">
-						<p> 3A Systems Design Engineering, UW <br>
-							Designer • Developer</p>
-						<!-- <p id = 'current_term'></p> -->
-					</div>
-				</header>
-				<a href="https://github.com/kmpit" target="_blank">
-					<div class = "button" float = "left">
-						<h4>Github</h4>
-					</div>
-				</a>
-				<a href="https://www.linkedin.com/in/kimberley-pita/" target="_blank">
-					<div class = "button" float = "right">
-						<h4>LinkedIn</h4>
-					</div>
-				</a>
+			<div id = "overlay">
+
+
+				<div id="foreground"> 
+					<header>
+						<div class = "souslined">
+							<h1>Kimberley Pita</h1>
+						</div>
+						<div class = "subtitle">
+							<p> 3A Systems Design Engineering, UW <br>
+								Designer • Developer</p>
+							<!-- <p id = 'current_term'></p> -->
+						</div>
+					</header>
+					<a href="https://github.com/kmpit" target="_blank">
+						<div class = "button" float = "left">
+							<h4>Github</h4>
+						</div>
+					</a>
+					<a href="https://www.linkedin.com/in/kimberley-pita/" target="_blank">
+						<div class = "button" float = "right">
+							<h4>LinkedIn</h4>
+						</div>
+					</a>
+				</div>
+
 			</div>
+			
 		</div>
 
 		<!--About-->
@@ -84,8 +90,9 @@
 			</div>
 		</div>
 
-		<div class = "section_break" id = "break_1"></div>
+		<div class = "section_break_solid"></div>
 
+		<div class = "blue_background">
 		<div class = "section_wrapper" id = "experience_section">
 			<h2>Experience</h2>
 
@@ -110,7 +117,7 @@
 					<h3>Counsellor</h3>
 					<h4>Camp Scugog | Jul 2016 - Aug 2018 </h4>
 				</div>
-				<div id = "Kumon" class = "list_item last" onclick = "openDisplay(this, 'experience')">
+				<div id = "Kumon" class = "list_item" onclick = "openDisplay(this, 'experience')">
 					<h3>Grader</h3>
 					<h4>Kumon | Nov 2015 - Jun 2017</h4>
 				</div>
@@ -128,12 +135,14 @@
 
 			<div id = "experience_display" class = "display">
 				<div id = "Avidbots_content" class = "display_item">
-					<p>This past term, I joined the web team at 
+					<!-- <div style = "width: 100px; height: 10px; background-color: var(--flower-yellow); margin-bottom: 25px;"></div> -->
+					<p>
+						This past term, I joined the web team at 
 						<a class = "intext"
 							href = "https://www.avidbots.com/"
 							target = "_blank"> 
-							Avidbots</a>
-						and learned a lot while also making a big impact:</p>
+							Avidbots</a>,
+						where I not only learned a ton but also made a big impact:</p>
 					<ul>
 						<li>Streamlined environment configuration process, decreasing manual steps from 22 to 8</li>
 						<li>Sped up unit tests more than 200% using parallelization, new libraries, CSS techniques</li>
@@ -238,20 +247,133 @@
 				</div>
 			</div>
 		</div>
+		</div>
 
-		<div class = "section_break" id = "break_2"></div>
+		<div class = "section_break_solid"></div>
 		
 		<div class = "section_wrapper" id = "project_section" >
 			<h2>Projects</h2>
-			<div id="card_container"></div>
+			<div class = "row">
+				<div class = "card left">
+					<div class = "card_img">
+						<img src = "images/audio-circuit.jpg">
+					</div>
+					<div class = "card_text">
+						<h3>Audio Processing Circuit</h3>
+						<p>Description of my awe-inspiring talent.</p>						
+					</div>
+				</div>
+				<div class = "card right">
+					<div class = "card_img">
+						<img src = "images/FAQ.PNG">
+					</div>
+					<div class = "card_text">
+						<h3>Info Design Work</h3>
+						<p>Description of my awe-inspiring talent.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class = "row">
+				<div class = "card left">
+					<div class = "card_img">
+						<img src = "images/flex-project.png">
+					</div>
+					<div class = "card_text">
+						<h3>CIBC Flex Project</h3>
+						<p>Description of my awe-inspiring talent.</p>
+					</div>
+				</div>
+				<div class = "card right">
+					<div class = "card_img">
+						<img src = "images/boardgame.jpg">
+					</div>
+					<div class = "card_text">
+						<h3>Electronic Boardgame</h3>
+						<p>Description of my awe-inspiring talent.</p>
+					</div>
+				</div>
+			</div>
+			<div class = "row">
+				<div class = "card left">
+					<div class = "card_img">
+						<img src = "images/watoplan.PNG">
+					</div>
+					<div class = "card_text">
+						<h3>WaToPlan Time Management System</h3>
+						<p>Description of my awe-inspiring talent.</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
-		<div class = "section_break" id = "break_3"></div>
+		<div class = "section_break_solid"></div>
+
+		<div class = "blue_background">
+			<div class="section_wrapper" id = "skills">
+				<h2>Skills</h2>
+				<table>
+					<tr>
+						<td class = "right">
+							<h4>Dev</h4>
+						</td>
+						<td>
+							<div>
+								<p><b>Frontend development </b> HTML • CSS • JavaScript • Typescript • Angular • Material • i18n</p>
+								<p><b>Object-oriented programming </b> C/C++ • Python</p>
+								<p><b>Scrum leadership </b> Agile • JIRA • Confluence</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class = "right">
+							<h4>UX/UI Design + Research</h4>
+						</td>
+						<td>
+							<div>
+								<p><b>UX/UI design </b>Iterative, systems-based design process</p>
+								<p><b>User research </b> User interviews • Usability testing • Concept testing • 
+									Qual/quant data analysis • Looker • Tableau</p>
+								<p><b>Wireframing </b>Figma • InVision  |  <b>Graphic design</b></p>
+								<p><b>Design communication </b>Design workshops • Personas • Concept Maps • Report creation and presentation • Initiative planning</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class = "right">
+							<h4>DevOps</h4>
+						</td>
+						<td>
+							<div>
+								<p><b>Environment management </b> Shell scripting • Docker • Kubernetes </p>
+								<p><b>CI unit testing </b> Karma • Jasmine</p>
+								<p><b>QA + regression testing  |  CORS</b></p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class = "right">
+							<h4>Electro-mechanical</h4>
+						</td>
+						<td>
+							<div>
+								<p><b>Analog + digital circuit design </b> Signal processing + filtering • Arduino • Breadboarding • MIPS</p>
+								<p><b>3D design + technical drafting </b> SolidWorks • AutoCAD • 3D Printing</p>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		</div>
+
+		<div class = "section_break_solid"></div>
 
 		<div class = "section_wrapper" id = "life">
 			<h2>Life</h2>
 
-			<table >
+			<table>
 				<tr>
 					<td class = "wide">
 						<h3>Music</h3>
@@ -268,6 +390,7 @@
 							during which I doubled event attendance	and revamped cumbersome admin processes. 
 						</p>
 					</td>
+					<td class = "buffer"></td>
 					<td class = "narrow">
 						<img src = "./images/busking.jpg">
 						<!-- <img src = "./images/bluewine.jpg"> -->
@@ -285,6 +408,7 @@
 								Instagram:</a> 
 						</p>
 					</td>
+					<td class = "buffer"></td>
 					<td class = "narrow">
 						<script src="https://snapwidget.com/js/snapwidget.js"></script>
 						<iframe src="https://snapwidget.com/embed/815211" 
@@ -307,6 +431,7 @@
 								to see if we have any favourite books in common!
 						</p>
 					</td>
+					<td class = "buffer"></td>
 					<td class = "narrow">
 							<img class = "side_by_side third"  src = "./images/boo-2.jpg">
 							<img class = "side_by_side third"  src = "./images/lucie-2.jpg">
@@ -314,209 +439,16 @@
 					</td>
 				</tr>
 			</table>
-
-			<!-- <div class = "column first">
-				<h3>Art</h3>
-				<p> Hand in hand with my love for design is a love for visual art; 
-					it's a way to de-stress, to capture to the world, and to show appreciation for loved ones.  			
-					Check out my work on 
-					<a class = "intext"
-						href = "https://www.instagram.com/nim_chimpsky_fan_account/"
-						target = "_blank"> 
-						Instagram:</a> 
-				</p>
-				<script src="https://snapwidget.com/js/snapwidget.js"></script>
-				<iframe src="https://snapwidget.com/embed/815211" 
-						class="snapwidget-widget" 
-						allowtransparency="true" 
-						frameborder="0" 
-						scrolling="no" >
-				</iframe>				
-			</div>
-
-			<div class = "column">
-				<h3>Music</h3>
-				<p> I love to sing, play the flute, and write original songs!
-					I'm also part of the 
-					<a class = "intext" 
-						href = "https://www.youtube.com/user/unaccompaniedminoruw" 
-						target = "_blank"
-						SameSite = "none"
-						secure>
-						Unaccompanied Minors,</a> 
-					a competitive a cappella group. </p>
-
-					<img class = "side_by_side half" src = "./images/busking.jpg">
-					<img class = "side_by_side half"  src = "./images/bluewine.jpg">
-
-				<p>	I've even served multiple terms as the group's President, 
-					during which I doubled event attendance	and revamped cumbersome admin processes. 
-				</p>
-
-
-				<h3>Etc.</h3>
-				<p>I keep active by jogging and by walking the family dogs: Boo, Lucie, and Franklin. 
-				<br>I also love to read - take a look at my
-					<a class = "intext"
-						href = "https://www.goodreads.com/user/show/113466171-k-pi"
-						target = "_blank">
-						Goodreads</a>
-						to see if we have any favourite books in common.
-				</p>
-				<div>
-					<img class = "side_by_side third"  src = "./images/boo.jpg">
-					<img class = "side_by_side third"  src = "./images/lucie.jpg">
-					<img class = "side_by_side third"  src = "./images/franklin.jpg">
-				</div>
-
-			</div> -->
-
-
-			<!-- <div id = "life_list" class = "side_list">
-				<div id = "music" class = "list_item selected" onclick = "openDisplay(this, 'life')">
-					<h3>Music</h3>
-				</div>
-				<div id = "art" class = "list_item" onclick = "openDisplay(this, 'life')">
-					<h3>Art</h3>
-				</div>
-				<div id = "more" class = "list_item" onclick = "openDisplay(this, 'life')">
-					<h3>More!</h3>
-				</div>
-			</div>
-
-			<div id = "life_display" class = "display">
-				<div id = "music_content" class = "display_item">
-					<p> I love to sing, play the flute, and write original songs!
-						My passion for music and performance led me to join the 
-						<a class = "intext" 
-							href = "https://www.youtube.com/user/unaccompaniedminoruw" 
-							target = "_blank"
-							SameSite = "none"
-							secure>
-							Unaccompanied Minors,</a> 
-						a competitive a cappella group. 
-					<p> I've even served multiple terms as the group's President, 
-						during which I attracted record numbers of auditionees, doubled event attendance,
-						and revamped cumbersome admin processes. 
-					</p>
-					<img class = "side_by_side half" src = "./images/busking.jpg">
-					<img class = "side_by_side half"  src = "./images/bluewine.jpg">
-					<p>In Winter 2020, the Unaccompanied Minors made history by placing runner-up at the ICCA Quarterfinals 
-						after only 6 weeks of rehearsal!
-					</p>
-					<div class = "video_container">
-						<iframe 
-							class = "video_embed" 
-							src="https://www.youtube.com/embed/mz0pqmlGvfw?"
-							frameborder = "0"
-							allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen	>
-						</iframe>
-					</div>
-				</div>
-
-				<div id = "art_content" class = "display_item">
-					<p> Hand in hand with my love for design is a love for visual art. 
-						I pursue art in my spare time, creating pieces for fun and to give as gifts, 
-						and take photos of things that make me happy.				
-					</p>
-					<p>
-						Check out some of my work on 
-						<a class = "intext"
-							href = "https://www.instagram.com/nim_chimpsky_fan_account/"
-							target = "_blank"> 
-							Instagram:</a> 
-					</p>
-						<script src="https://snapwidget.com/js/snapwidget.js"></script>
-						<iframe src="https://snapwidget.com/embed/815211" 
-								class="snapwidget-widget" 
-								allowtransparency="true" 
-								frameborder="0" 
-								scrolling="no" >
-						</iframe>
-				</div>
-
-				<div id = "more_content" class = "display_item">
-					<p>I keep active by jogging and by walking the family dogs: Boo, Lucie, and Franklin. 
-					</p>
-					<p>I also love to read - take a look at my
-						<a class = "intext"
-							href = "https://www.goodreads.com/user/show/113466171-k-pi"
-							target = "_blank">
-							Goodreads</a>
-							to see if we have any favourite books in common.
-					</p>
-						<img class = "side_by_side third"  src = "./images/boo.jpg">
-						<img class = "side_by_side third"  src = "./images/lucie.jpg">
-						<img class = "side_by_side third"  src = "./images/franklin.jpg">
-				</div>
-			</div> -->
 		</div>
 
-		<div class = "section_break" id = "break_4"></div>
-			
-		<div class="section_wrapper" id = "skills">
-			<h2>Skills</h2>
-			<table>
-				<tr>
-					<td class = "right">
-						<h4>Dev</h4>
-					</td>
-					<td>
-						<div>
-							<p><b>Frontend development </b> HTML • CSS • JavaScript • Typescript • Angular • Material • i18n</p>
-							<p><b>Object-oriented programming </b> C/C++ • Python</p>
-							<p><b>Scrum leadership </b> Agile • JIRA • Confluence</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class = "right">
-						<h4>UX/UI Design + Research</h4>
-					</td>
-					<td>
-						<div>
-							<p><b>UX/UI design </b>Iterative, systems-based design process</p>
-							<p><b>User research </b> User interviews • Usability testing • Concept testing • 
-								Qual/quant data analysis • Looker • Tableau</p>
-							<p><b>Wireframing </b>Figma • InVision  |  <b>Graphic design</b></p>
-							<p><b>Design communication </b>Design workshops • Personas • Concept Maps • Report creation and presentation • Initiative planning</p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class = "right">
-						<h4>DevOps</h4>
-					</td>
-					<td>
-						<div>
-							<p><b>Environment management </b> Shell scripting • Docker • Kubernetes </p>
-							<p><b>CI unit testing </b> Karma • Jasmine</p>
-							<p><b>QA + regression testing  |  CORS</b></p>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td class = "right">
-						<h4>Electro-mechanical</h4>
-					</td>
-					<td>
-						<div>
-							<p><b>Analog + digital circuit design </b> Signal processing + filtering • Arduino • Breadboarding • MIPS</p>
-							<p><b>3D design + technical drafting </b> SolidWorks • AutoCAD • 3D Printing</p>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</div>
-
-		<div id = "footer">
+		<div id = "footer" class = "blue_background">
 			<h2>Let's talk!</h2>
-			<p>Ready to do great things together? Shoot me en email!
+			<p>Ready to do great things together? Shoot me en 
+				<a class = "intext" href = "mailto:kimberley.pita@gmail.com">email!</a>
 			<br>You can also check out my work below, or view my resume
 				<a class = "intext" href="./assets/Kim Pita - Resume.pdf" download target = "_blank">here</a>.
 			</p>
-			<a href="mailto:kmpita@uwaterloo.ca" target="_blank">
+			<a href="mailto:kimberley.pita@gmail.com">
 				<img class="logo" src = "./images/email.png"></img>
 			</a>
 			<a href="https://linkedin.com/in/kimberley-pita" target="_blank">
@@ -525,6 +457,7 @@
 			<a href="https://github.com/kmpit" target="_blank">
 				<img class="logo" src = "./images/Github.png"></img>
 			</a>
+
 			<a href="https://www.instagram.com/nim_chimpsky_fan_account/" target="_blank">
 				<img class="logo" src = "./images/insta.png"></img>
 			</a>

@@ -97,7 +97,7 @@ function openDisplay(caller, section){
     /* De-select all the list items in the section and select the one that was clicked */
     list_children = document.getElementById(section.concat("_list")).children;
     for (var j = 0; j < list_children.length; j++){
-        if (list_children[j].className == "list_item selected" || list_children[j].className == "list_item last selected"){
+        if (list_children[j].className == "list_item selected"){
             list_children[j].className = list_children[j].className.replace(" selected", "");
         }
     }
