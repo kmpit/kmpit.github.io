@@ -1,14 +1,14 @@
 /*Functions-----------------------------------------------------------------------------------------*/
 
+// Init stuff
+
 function onInit(){
     console.log('onInit called');
 
     /* Show default items */
     document.getElementById("Avidbots_content").style.display = "block";
-    document.getElementById("music_content").style.display = "block";
 
     // getCurrentTerm(); 
-    // createCards();    
 }
 
 // populate current term in the header
@@ -31,18 +31,19 @@ function getCurrentTerm(){
     else {
         term = '3A';
     }
-    document.getElementById('current_term').innerHTML = (term+' Systems Design Engineering, UWaterloo');
+    document.getElementById('current_term').innerHTML = (term);
 }
 
 
-/* Functions -------------------------------------------------------------*/
-
+// ***************************************************************************************//
 // Nav menu
+// ***************************************************************************************//
 
 // onclick for nav menu - either close or open
 function navOnClick(){
-    var nav_height = parseInt(document.getElementById("nav_menu").style.height);
-    if (nav_height > 0 ){
+    var nav_height = document.getElementById("nav_menu").style.height;
+
+    if (nav_height == "auto"){
         closeMenu();
         return;
     }
@@ -53,20 +54,24 @@ function navOnClick(){
 
 // functions to close and open the nav menu
 function openMenu(){
-    document.getElementById("nav_menu").style.height = "35vh";
-    // console.log('width is ', document.getElementById("nav_menu").style.width);
+    document.getElementById("nav_menu").style.height = "auto";
+    document.getElementById("nav_menu").style.maxHeight = "70vh";
+
 }
 
 function closeMenu(){
     document.getElementById("nav_menu").style.height = "0px";
+    document.getElementById("nav_menu").style.maxHeight = "0vh";
+
 }
 
-//event listener to close the nav menu when user clicks elsewhere
+// event listener to close the nav menu when user clicks elsewhere
 document.addEventListener("click", function(event) {
     // check that sidebar is opened
-    var height = parseInt(document.getElementById("nav_menu").style.height);
+    var nav_height = document.getElementById("nav_menu").style.height;
+
     // console.log('wdith is', width);
-    if (height > 0 ){
+    if (nav_height == "auto" ){
         // If user clicks inside the sidebar, do nothing
         if (event.target.closest(".nav_menu")) {
             return;
@@ -82,6 +87,9 @@ document.addEventListener("click", function(event) {
      }
 });
 
+// ***************************************************************************************//
+// Side list and display panels
+// ***************************************************************************************//
 
 // Function to show the appropriate content for selection list + display sections
 function openDisplay(caller, section){
@@ -117,12 +125,11 @@ document.getElementById("experience_list").addEventListener("scroll", function(e
 
     for (var i = 0; i < children.length; i++){
 
-        // find leftmost pixel of each list item
+        // get starting position of each list item
         var rect = children[i].getBoundingClientRect();
-        var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-        var left = rect.left + scrollLeft; 
+        var left = rect.left; 
 
-        // open the list item that the user has scrolled into view
+        // open the first list item that is scrolled into view and exit
         if (!found && left > 0){
             found = true;
             index = i;
@@ -135,9 +142,11 @@ document.getElementById("experience_list").addEventListener("scroll", function(e
     console.log('here i am');
     circles = document.getElementById("exp_page_indicator").children;
     for (var j = 0; j < circles.length; j++){
+        // unhighlight previous selection
         if (circles[j].className == "circle selected"){
             circles[j].className = circles[j].className.replace(" selected", "");
         }
+        //highlight circle for new selection
         if (j == index){
             circles[j].className+=" selected";
         }
@@ -147,23 +156,88 @@ document.getElementById("experience_list").addEventListener("scroll", function(e
 // Mobile-only: onclick function for the page indicator 
 
 function circleClick (index) {
+    console.log('circle click fired');
+    console.log(index);
 
-    const portrait_width = 450; // max width of phone in portrait
-    var scroll_distance; // calculates distance to scroll list based on circle clicked and screen orientation
+    // get starting position of list item we should be scrolling to 
+    var children = document.getElementById("experience_list").children;
+    var rect = children[index].getBoundingClientRect();
+    // account for existing scroll to get correct scroll_distance to plug into scrollTo
+    var scrollLeft = window.pageXOffset || document.getElementById("experience_list").scrollLeft;
 
-    if (screen.width < portrait_width ){
-        scroll_distance = screen.width * 0.95 * index;
-    }
-    else {
-        scroll_distance = screen.width * 0.1 + screen.width * 0.8 * index;
-    }
+    var scroll_distance = rect.left + scrollLeft; 
 
     // scroll the list to the desired element and the scroll event listener will update the display
     document.getElementById('experience_list').scrollTo(scroll_distance, 0);
 
     circles = document.getElementById("exp_page_indicator").children;
     circles[index].className+=" selected";
+}
 
 
+// ***************************************************************************************//
+// Project section
+// ***************************************************************************************//
+function projectClick (caller){
+    console.log(caller);
+
+    document.getElementsByClassName("modal")[0].style.display = "block";
+    document.getElementsByClassName("modal_content")[0].style.display = "block";
+    document.getElementsByClassName("page_overlay")[0].style.display = "block";
+    document.body.style.overflow = "hidden";
+    // document.getElementsByClassName("modal")[0].style.overflowY = "auto";
+    document.getElementsByClassName("modal_content")[0].style.overflowY = "auto";
+
+
+    var name = caller.id + "_content";
+
+    var project_details = document.getElementById(name);
+    
+    var clone = project_details.cloneNode(true);
+
+    clone.style.display = "block";
+
+    document.getElementsByClassName("modal_content")[0].appendChild (clone);
+    
+    //Make sure the top of content is shown, even if user previously scrolled down on other content
+    clone.scrollIntoView(); //scrolls exactly to top of modal_content
+    document.getElementsByClassName("modal")[0].scrollTop -= "5vh"; //scroll up a bit more to show the padding on the modal
+
+
+};
+
+// event listener to close the modal when user clicks elsewhere
+document.addEventListener("click", function(event) {
+    // console.log('fired');
+
+    // check that modal is showing
+    var display = document.getElementsByClassName("modal_content")[0].style.display;
+    if (display != "none"){
+        // If user clicks inside the modal, do nothing
+        if (event.target.closest(".modal")) {
+            return;
+        }
+        // If user is just opening the modal
+        else if (event.target.closest(".card")) {
+            return;
+        }
+        // else close the sidebar
+        else {
+            closeModal(); 
+        }
+     }
+});
+    
+function closeModal(){
+    document.getElementsByClassName("modal")[0].style.display = "none";
+    document.getElementsByClassName("modal_content")[0].style.display = "none";
+    document.getElementsByClassName("page_overlay")[0].style.display = "none"; 
+    var child = document.getElementsByClassName("modal_content")[0].children[0];
+    console.log(child);
+    if (child) {
+        document.getElementsByClassName("modal_content")[0].removeChild(child);
+        document.body.style.overflow = "auto";
+
+    }
 }
 

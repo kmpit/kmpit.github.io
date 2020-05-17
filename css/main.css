@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Pontano+Sans);
+
 @font-face {
     font-family: "Pontano Sans";
     src: "../fonts/PontanoSans-Regular.ttf";
@@ -6,10 +7,13 @@
 
 /*Style sheet for index.html*/
 
-/*General-------------------------------------------------------------------------------*/
+/************************************************************************************************************************/
+/*High-level, text -------------------------------------------------------------------------------*/
+/************************************************************************************************************************/
+
 :root{
 	--sky-blue: #979aaf; /*#afb3d0;*/
-	--dark-blue: #3a3d5f;
+	--dark-blue: #363857;
 	--light-blue: #c5c8e0;
 	--flower-yellow: #f3a704;
 	--light-yellow: #fad075;
@@ -23,7 +27,7 @@ html {
 
 /*Text-----------------------------------------------------------------------------*/
 body {	
-	font-family: "Pontano Sans";
+	font-family: "Pontano Sans", Arial;
 	font-size: 2.8vh;
 	color: #000000;
 	margin: 0; 
@@ -38,21 +42,23 @@ header {
 		
 h1 {	
 	font-size: 2.8em;
-	margin-block-end: 1vw;
+	margin-bottom: 1vw;
 	color: #FFFFFF; 
 	text-transform: uppercase;
 }
 
 h2 {	font-size: 1.7em;
 		text-align: left;
-		margin-top:0;}
+		margin-top:0;
+		color: black;
+	}
 
 h3 {
 	font-size: 1.2em;
 	color:black;
 	font-weight:bold;
-	margin-block-start: 0vh;
-	margin-block-end: 0.2em;
+	margin-top: 0vh;
+	margin-bottom: 0.2em;
 }
 		
 h4 {	
@@ -60,22 +66,32 @@ h4 {
 	color: var(--sky-blue);
 	padding-top: 0px;
 	padding-bottom: 0px;
-	margin-block-start: 0vh;
-	margin-block-end: 0vh;
+	margin-top: 0vh;
+	margin-bottom: 0vh;
 	text-transform: uppercase; 
 }
 
-p {	
-	margin-block-start: 0;
-	margin-block-end: 4vh;	
+h5 {
+	font-size: 1em;
+	margin-bottom: 0.5em;
 }
 
+p {	
+	margin-top: 0;
+	margin-bottom: 4vh;	
+}
+
+/************************************************************************************************************************/
 /*Generic containers-----------------------------------------------------------------------------------------------------------*/
+/************************************************************************************************************************/
+
+/* Wrapper for whole page ----------------------------------------------------------------------------*/
 div.wrapper {	
 	width: 100%;
 	max-width: 100%;	
 }
 
+/* Wrapper for individual sections -----------------------------------------------------------------------*/
 div.section_wrapper {	
 	width: 70%;
 	max-width: 80%;	
@@ -87,35 +103,19 @@ div.section_wrapper {
 	overflow:auto;
 }
 
+/* Settings for sections with blue backgrounds --------------------------------------------------------*/
 div.blue_background {
+	background: rgb(54, 56, 87); 	/* fallback for stupid IE */
 	background-color: var(--dark-blue);}
-div.blue_background p {
+div.blue_background p, div.blue_background h2 {
 	color: white;}
-div.blue_background h2 {
-	color: white;}
-div.blue_background h4 {
-	color: var(--light-blue);
-}
-
+div.blue_background h3, div.blue_background h4 {
+	color: rgb(197, 200, 224);/* fallback for stupid IE */
+	color: var(--light-blue); }
 div.blue_background li {
 	color: white;}
-div.blue_background a.intext { 
-	box-shadow:
-    	inset 0 -0.15em var(--dark-blue),
-    	inset 0 -0.4em var(--pink);
-	display: inline;
-	color: white;
-}
-div.blue_background a.intext:hover{ 
-	box-shadow:
-		inset 0 -0.15em var(--dark-blue),
-		inset 0 -0.4em var(--dark-pink);
-}
-/* div.blue_background a.intext:visited {
-	color: lightgrey;
-} */
 
-
+ 
 div.section_break {
 	width:100%;
 	height:12vh;
@@ -123,20 +123,22 @@ div.section_break {
 	background-repeat: no-repeat;
 	background-size: cover; 
 	position: relative; 
-	/* background-attachment: fixed; */
 }
+
+/*
 div.section_break_solid {
 	width:100%;
 	height:1vh;
 	background-color: var(--light-blue);
 	display: none;
-}
+} */
 
+/* Container with a nice line along the bottom ------------------------------------------------*/
 div.souslined {
 	border-bottom: 3px solid white;
 }
 
-div.column {
+/* div.column {
 	float: left;
 	width: 47.5%;
 	text-align: left;
@@ -144,23 +146,25 @@ div.column {
 }
 div.column.first {
 	margin-left: 0;
-}
+} */
 
 
-div.video_container {
+/* div.video_container {
 	width: 100%;
 	max-width: 35em;
 	margin: 0 auto;
 	height: 0;
-	padding-bottom: 56.25%; /* from aspect ratio of youtube videos*/
+	padding-bottom: 56.25%;
 	position: relative;
 }
 iframe.video_embed {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-}
+} 
+*/
 
+/* Iframe for the instagram widget -----------------*/
 iframe.snapwidget-widget {
 	border:none; 
 	overflow:hidden;  
@@ -171,10 +175,11 @@ iframe.snapwidget-widget {
 }
 
 
+/************************************************************************************************************************/
+/*Generic components----------------------------------------------------------------------------------------------------*/
+/************************************************************************************************************************/
 
-/*Generic components-----------------------=-------------------------------------------------------------------------*/
-
-/*buttons*/
+/*buttons------------------------------------------------------------------------------------------*/
 div.button {	
 	display: inline-block;
 	cursor: pointer;
@@ -194,12 +199,12 @@ div.button:hover > h4 {
 	color: #a4a7ae; }
 
 
-/*Selection lists with display windows to the right*/
+/*Selection lists with display windows to the right--------------------------------------------------*/
 div.side_list {
 	float: left;
 	position: relative;
 }
-div.side_list::after {
+div.side_list::after { /* forms right border / timeline */
 	content: '';
 	position: absolute;
 	width: 4px;
@@ -228,7 +233,7 @@ div.list_item h4 {
 	font-size: 0.8em; 
 	color: var(--light-blue);
 }
-div.list_item::after {
+div.list_item::after { /* points on timeline */
 	content: '';
 	position: absolute;
 	width: 20px;
@@ -241,13 +246,18 @@ div.list_item::after {
 }
 
 div.list_item:hover {
-	cursor: pointer; }
+	cursor: pointer; 
+	margin-left: 0.2em; 
+	/*is this gucci? wanted to better show hover/selection considering the only difference before was bolding the text */
+}
 div.list_item:hover h3 {
-	color: var(--light-blue);
-	font-weight: bold; }
+	font-weight: bold; 
+	/* font-size: 1.3em;  */
+}
 div.list_item:hover h4 {
-	color: var(--light-blue);
-	font-weight: bold; }
+	font-weight: bold; 
+	/* font-size: 0.9em; */
+}
 div.list_item:hover::after {
 	background-color:var(--light-yellow);
 	width: 25px;
@@ -255,9 +265,14 @@ div.list_item:hover::after {
 	right: -12.5px;
 }
 
+div.list_item.selected {
+	margin-left: 0.2em;
+}
 div.list_item.selected h3 {
 	color: white;
-	font-weight: bold; }
+	font-weight: bold; 
+	/* font-size: 1.4em; */
+}
 div.list_item.selected h4 {
 	color: white;
 	font-weight: bold; }
@@ -284,7 +299,8 @@ div.page_indicator {
 	margin-bottom: 0em;
 	display: none; /* only for mobile, see media queries */
 }
-div.circle {
+
+div.circle { /* for the page indicator*/
 	vertical-align: top;
 	cursor: pointer;
     height: 12px;
@@ -300,11 +316,8 @@ div.circle.selected {
 
 
 
-/* Cards */
-div.row {
-	margin-bottom: 1em;
-	display: static;
-}
+/* Cards -----------------------------------------------------------------------------------------*/
+
 div.card {
 	width: 47%;
 	text-align: left;
@@ -312,23 +325,26 @@ div.card {
 	margin-bottom: 1em;
 	padding-top: 1em;
 	min-height: 2em;
+	box-shadow: 0px 3px 8px 0px rgb(197, 200, 224) ; /*IE*/
 	box-shadow: 0px 3px 8px 0px var(--light-blue);
 	min-height: 6em;
-	vertical-align: center;
+	display: block;
+	overflow: hidden;
+	float: left;
 }
 div.card p {
-	margin-block-end: 0;
-}
+	margin-bottom: 0; }
+div.card img {
+	margin-bottom: 0;}
+
 div.card.left {
 	float: left;
-	display: block;
 	margin-left: 1%;
 	margin-right: 3%;
 	clear: both;
 }
 div.card.right {
 	float: right;
-	display: block;
 	margin-right: 1%;
 }
 
@@ -337,13 +353,20 @@ div.card:hover {
 	transition: transform 0.25s ease-out;
 	cursor: pointer;
 }
-
-div.card_img {
-	width: 30%;
+div.card_content {
+	position: relative;
+	height: auto;
 	float: left;
+}
+div.card_img {
+	max-width: 30%;
 	margin-left: 4%;
 	margin-right: 4%;
 	display: block;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 div.card_text {
 	width: 58%;
@@ -353,7 +376,65 @@ div.card_text {
 }
 
 
-/* Tables */
+
+/* Modal --------------------------------------------------------------------------------------*/
+div.modal {
+	z-index: 400;
+	width: 50%;
+	height: 70vh;
+	transition: height 0.3s ease-in;
+
+	margin: 5vh 20% 5vh 20%;
+	padding: 5%;
+
+	position: fixed;
+	background-color: white; 
+	display: none;
+
+	overflow-y: auto;
+
+	/* -ms-overflow-style: none; */
+
+}
+/* div.modal::-webkit-scrollbar {
+	display: none;
+} */
+div.modal h4 {
+	margin-bottom: 0.8em;
+}
+div.modal p {
+	margin-top: 1em;
+}
+
+div.x_button_container {
+	float: right;
+}
+div.x_button {
+	text-align: right;
+	margin-top: -4vh;
+	margin-right: -100%;
+	margin-bottom: -1em;
+	cursor: pointer;
+	/* position: fixed; should it be? will it be annoying? */
+	background-color: white;
+	padding: 50%;
+
+}
+div.x_button h4 {
+	margin: 0;
+}
+div.page_overlay {
+	background-color: rgba(0,0,0,0.4);
+	width: 100%;
+	height: 100%;
+	z-index: 300;
+	position: fixed;
+	display: none;
+	transition: opacity 1s ease-in;
+}
+
+
+/* Tables------------------------------------------------------------------------------------ */
 table {
 	margin-left:auto;
 	margin-right:auto;
@@ -365,24 +446,15 @@ td {
 	text-align:left;
 }
 td.wide{
-	width: 55%;
+	width: 65%;
 	vertical-align:center;
 }
 td.narrow {
-	width: 40%;
+	width: 30%;
 }
 td.buffer {
 	width: 5%;
 	padding: 0;
-}
-td.tiny {
-	width: 15%;
-}
-td.small_buffer {
-	width: 2.5%;
-}
-td.med {
-	width: 30%;
 }
 
 
@@ -393,32 +465,36 @@ td.right {
 }
 
 					
-/*Links*/
-a {
-	color: var(--dark-blue); }
+/*Links----------------------------------------------------------------------------------------------------------*/
+/* a {
+	color: var(--dark-blue); } */
 
 a.intext { 
-	text-decoration:none;
-	color:black;
-	box-shadow:
+	text-decoration: underline;
+	/* text-decoration-color:var(--flower-yellow); */
+	color: inherit;
+	/* color: rgb(80, 127, 255); */
+	/* box-shadow:
     	inset 0 -0.15em white,
     	inset 0 -0.4em var(--pink);
-	display: inline;
+	display: inline; */
 }
 a.intext:hover{ 
 	font-weight:bold;
-	box-shadow:
+	/*	box-shadow:
     	inset 0 -0.15em white,
-    	inset 0 -0.4em var(--dark-pink);
+		inset 0 -0.4em var(--dark-pink); */
 }
 /* a.intext:visited{
 	color: grey;
 } */
 	
 
-/*Images*/	
+/*Images---------------------------------------------------------------------------------------------*/	
 img {	
-	max-width: 100%; }
+	max-width: 100%; 
+	margin-bottom: 1em;
+}
 
 img.side_by_side {
 	float: left;
@@ -426,7 +502,7 @@ img.side_by_side {
 	padding-bottom: 3vh; 
 }
 img.side_by_side.half {
-		width: 48%; 
+	width: 48%; 
 }
 img.side_by_side.third {
 		width: 31%;
@@ -434,24 +510,32 @@ img.side_by_side.third {
 
 img.single {
 	display:block;
+	margin: 0 auto;
+	margin-bottom: 1em;
+	max-width: 20vw;
+}
+img.single.small {
 	width: 20vw;
 	max-width: 350px;
-	margin: 0 auto;
+}
+img.single.wide {
+	width: 40vw;
+	max-width: 700px;
 }
 
 
 
-/* Lists */
+/* Lists --------------------------------------------------------------------------------------------------*/
 ul {
-	/* list-style-position: outside; */
 	list-style-type: none;
 	margin-left: 0em;
-	margin-top: -0.5em;
+	/* margin-top: -0.5em; */
 	padding-left: 2em;
-	margin-block-end: 1.5em;
+	margin-bottom: 1.5em;
 }
 li {
 	margin-bottom: 0.3em;
+	clear: both;
 }
 li:before { 
 	content: "\00a0 \00a0 \00a0 -";
@@ -461,10 +545,11 @@ li:before {
 }
 
 
-
+/***************************************************************************************************************************/
 /*Page elements-------------------------------------------------------------------------------------------------------------*/
+/**************************************************************************************************************************/
 
-/*Menu*/ 
+/*Menu------------------------------------------------------------------------------------*/ 
 #sidebar{
 	position: fixed;
 	z-index:100; 
@@ -475,6 +560,7 @@ li:before {
 }
 
 div.button.menu_button {
+	background-color: #979aaf;
 	background-color: var(--sky-blue); 
 	border-style:none; }
 div.button.menu_button:hover {
@@ -484,9 +570,11 @@ div.button.menu_button:hover >h4 {
 
 #nav_menu {  /* actual nav menu element*/
 	height: 0; /*changes with JS */
+	max-height: 0vh; /* also changes with JS to enable transition on hardcoded val*/
+	transition: max-height 0.3s ease-out;
+
 	overflow-y: hidden;
-	transition: height 0.2s ease-out;
-	text-align:right; 
+	text-align: right; 
 }
 div.button.menu_button.option {
 	float:right;
@@ -495,16 +583,21 @@ div.button.menu_button.option {
 }
 
 
-/* Header */
+/* Header ------------------------------------------------------------------------*/
 #titleblock { 
 	height: 95vh;	
 	background-image: url("../images/porch-3.jpg");
 	background-attachment: fixed;
 	text-align: center;
 	clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 52% 96%, 50% 100%, 48% 96%, 0% 96%);
-
 }
-#overlay {
+#titleblock p {
+	text-transform: uppercase;
+	margin-top: 3vh;
+	margin-bottom: 1vh;
+}
+
+#title_overlay {
 	position: absolute;
 	display: block;
 	width: 100%;
@@ -512,17 +605,11 @@ div.button.menu_button.option {
 	background-color: rgba(0,0,0,0.2);
 	z-index: 2; 
 }
-#titleblock p {
-	text-transform: uppercase;
-	margin-block-start: 3vh;
-	margin-block-end: 1vh;
-}
 
 #foreground {	
 	position: absolute;
 	width: 50%;
 	min-width: 60vh;
-	max-width: 70vh;
 	margin: 0 auto;
 	top: 50%;
 	left: 50%;
@@ -531,11 +618,12 @@ div.button.menu_button.option {
 }
 
 
-/*About me*/
+/*About me-------------------------------------------------------------------------------------------------*/
 
 #about {
 	vertical-align: center;
 	position: relative;
+	min-height: 18em; /* prevent collapse on really short screens (e.g. mobile on side)*/
 }
 #aboutme_para {
 	display: block;
@@ -562,27 +650,25 @@ div.button.menu_button.option {
 
 
 /* Break 1 */
-#break_1{
+/* #break_1{
 	background-image: url("../images/yellow_flowers.jpg");
-}
+} */
 
 
-/* Experience */
+/* Experience ------------------------------------------------------------------------------------*/
 #experience_section {
-	text-align: left;
-}
+	text-align: left; }
 
 #experience_list {
 	width: 32%;	
 	margin-right: 5%; }
+
 #experience_display {
 	padding-top: 0.5em; 
-	/* padding: 1.5em 4% 1em 4%; */
-	padding-left: 2%;
+	padding-left: 5%;
 	border-width: 4px; 
 	border-color: var(--light-blue);
 	width:55%; 
-	/* background-color: #c5c8e028; */
 }
 
 #camp_img {
@@ -594,42 +680,38 @@ div.button.menu_button.option {
 
 
 /* Break 2 */
-#break_2{
+/* #break_2{
 	background-image: url("../images/tree-cropped.jpg");
-}
+} */
 
 
-/* Projects */
+/* Projects ----------------------------------------------------------------------------------*/
 
-#project_table td {
-	vertical-align: top;
-}
 
 /* Break 3 */
-#break_3{
+/* #break_3{
 	background-image: url("../images/bike.jpg");
-}
+} */
 
 
-/*Skills*/
+/*Skills-------------------------------------------------------------------------------------*/
 
 
 
-/*Life*/
+/*Life------------------------------------------------------------------------------------------*/
 
 #life h3 {
-	margin-block-end: 0.5em;
-}
+	margin-bottom: 0.5em; }
 
 
 /* Break 4 */
-#break_4 {
+/* #break_4 {
 	background-image: url("../images/whiteflower_sky.jpg");
-}
+} */
 
 
 
-/*Page footer*/
+/*Page footer---------------------------------------------------------------------------------*/
 #footer{
 	padding:5%;
 	text-align:center;
@@ -638,10 +720,10 @@ div.button.menu_button.option {
 #footer h2 {
 	text-align: center;
 	font-size: 7vh;
-	margin-block-end: 3vh;
+	margin-bottom: 3vh;
 }
 #footer p {
-	margin-block-end: 4vh;
+	margin-bottom: 4vh;
 }
 
 img.logo {
@@ -655,8 +737,9 @@ img.logo:hover {
 	transition: transform 0.2s ease-out;
 }
 
-
+/***********************************************************************************************************/
 /*Media queries  - override properties on mobile --------------------------------------------------------*/
+/***********************************************************************************************************/
 
 /* Mobile in general */
 @media only screen and (max-device-width: 1366px) {
@@ -664,20 +747,26 @@ img.logo:hover {
 		font-size: 20px;	}
 	h1 {
 		font-size:2.5em;	}
-	div.section_break {
-	  background-attachment: scroll;
-	  height: 50px;
+
+	div.x_button_container {
+		margin-right: 5%;
+	}
+	div.x_button {
+		margin-top: -3vh;
+		margin-bottom: 0%;
+	}
+	a.intext.selected {
+		margin-left: 0;
 	}
 
 	#foreground {
 		width: 80%;
 		min-width: 0;
-		max-width: none;
-	}
+		max-width: 70vh;
+}
 
 	#aboutme_para {
 		padding-top:0;
-		/* padding-right: 0; */
 	}
 }
 
@@ -694,20 +783,24 @@ img.logo:hover {
 		width: 94%; 
 		display: flex;
 		overflow-x: auto;
+
+		/*Firefox, Edge and friends*/
+		scroll-snap-type: mandatory;
+		scroll-snap-points-x: repeat(768px);
+		/*Chrome and Safari*/
 		scroll-snap-type: x mandatory;
-		scroll-behavior: smooth;
+
+		scroll-behavior: auto;
 		-webkit-overflow-scrolling: touch;
+		scroll-snap-destination: 0 0;
 	}
 	div.side_list::after{
 		display: none;
 	}
 	div.list_item {  /* show one at a time and scroll */
+		width: 100%;
 		scroll-snap-align: start;
 		flex-shrink: 0;
-		width: 100%;
-		margin-right: 50px;
-		transition: transform 0.3s;
-		position: relative;
 		display: block;
 	}
 	div.list_item::after{
@@ -740,22 +833,21 @@ img.logo:hover {
 @media only screen and (max-device-width: 1366px) and (orientation: landscape){
 	h1 { 
 		font-size:2em; }
-	#titleblock, #overlay {
+
+	div.modal {
+		width: 70%;
+		height: 70%;	
+		margin: 5% 10% 5% 10%;
+		padding-top: 5vh;
+	}
+
+	#titleblock, #title_overlay {
 		max-height: 100vh; }
 
-	/* table, tr, td {
-		display: block;
-	} */
-	/* td.med {
-		width: 75%;
+	#foreground {
+		max-width: 70vw;
 	}
-	td.tiny {
-		width: 20%;
-
-	}
-	td.small_buffer {
-		width: 5%;
-	} */
+	
 
 }
 
@@ -787,22 +879,23 @@ img.logo:hover {
 		text-align: left;
 	}
 
-	div.column {
-		width: 100%;
+	div.modal {
+		width: 70%;
+		height: 85%;	
+		margin: 5% 10% 5% 10%;
+		padding-top: 5vh;
 	}
 
 	#titleblock {
 		clip-path: none;
 	}
 
-	#about {
-		position: static;
-	}
 	#aboutme_para {
-		width: 100%;
 		position: static;
-		-ms-transform: translateY(0);
-		transform: translateY(0);
+		-webkit-transform: translateY(0%);
+		transform: translateY(0%);
+		max-width: none;
+		width: 40vw;
 	}
 
 	#footer {
@@ -814,16 +907,11 @@ img.logo:hover {
 
 /* Mobile portrait- excluding most tablets*/
 @media only screen and (max-device-width: 700px) and (orientation: portrait){
-	#aboutme_para {
-		display:block;
-		width:100%;
-		padding-right: none;
-	}
-	#aboutme_image {
+	img.single {
 		display:block;
 		width: 100%;
 	}
-	img.single {
+	img.single.small, img.single.wide {
 		display:block;
 		width: 100%;
 	}
@@ -842,9 +930,21 @@ img.logo:hover {
 		width: 85%;
 	}
 
+	div.card {
+		width: 96%;
+		overflow: auto;
+		height: auto;
+		display: block;
+	}
+	div.card.left {
+		clear: none;
+	}
+
 	div.card_img {
-		width: 92%;
-		float: none;
+		max-width: 92%;
+		position: static;
+		top: 0;
+
 		margin-left: 4%;
 		margin-right: 4%;
 		margin-bottom: 0.5em;
@@ -853,14 +953,35 @@ img.logo:hover {
 		width: 92%;
 		margin-left: 4%;
 		float: none;
+		display: inline-block;
+	}
+
+	#aboutme_para {
+		width: 100%;
+		position: static;
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+		padding-right: none;
+	}
+	#aboutme_image {
+		display:block;
+		width: 100%;
 	}
 }
 
 /* desktop -  small  */
-@media (max-device-width: 1000px){
+@media (max-device-width: 1030px){
 	div.card {
 		width: 98%;
 	}
+	div.card_img {
+		position: static;
+		top: 0;
+		-webkit-transform: translateY(0%);
+		transform: translateY(0%);
+		float: left;
+	}
+
 }
 
 
