@@ -412,13 +412,7 @@ div.modal {
 	display: none;
 
 	overflow-y: auto;
-
-	/* -ms-overflow-style: none; */
-
 }
-/* div.modal::-webkit-scrollbar {
-	display: none;
-} */
 div.modal h4 {
 	margin-bottom: 0.8em;
 }
@@ -435,7 +429,6 @@ div.x_button {
 	margin-right: -100%;
 	margin-bottom: -1em;
 	cursor: pointer;
-	/* position: fixed; should it be? will it be annoying? */
 	background-color: white;
 	padding: 50%;
 
@@ -753,7 +746,7 @@ img.logo:hover {
 	body {
 		font-size: 20px;	}
 	h1 {
-		font-size:2.4em;	}
+		font-size:2.3em;	}
 
 	div.x_button_container {
 		margin-right: 5%;
@@ -761,6 +754,7 @@ img.logo:hover {
 	div.x_button {
 		margin-top: -3vh;
 		margin-bottom: 0%;
+		position: fixed;
 	}
 	a.intext.selected {
 		margin-left: 0;
@@ -774,12 +768,6 @@ img.logo:hover {
 
 /* Mobile - excluding most tablets */
 @media only screen and (max-width: 850px){
-	div.button.menu_button.option { 
-		/*show menu buttons across the top so they don't cover content*/
-		float:none;
-		clear:none;
-		margin-top:0.2em; 
-	}
 	
 	div.side_list, #experience_list {
 		width: 94%; 
@@ -1026,3 +1014,12 @@ img.logo:hover {
 	width: device-width ;
 	zoom: 1.0 ;
 }
+
+
+
+/** Safari on iOS quick fix **/
+@supports (-webkit-touch-callout: none) {
+	div.section_break {
+		background-attachment: scroll;
+	}
+  }

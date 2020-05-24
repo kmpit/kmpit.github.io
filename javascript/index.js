@@ -112,7 +112,7 @@ function openDisplay(caller, section){
     caller.className += " selected";
 }
 
-// Mobile-only: event listener for when user scrolls through the selection list 
+// Small windows only: event listener for when user scrolls through the selection list 
 
 document.getElementById("experience_list").addEventListener("scroll", function(event) {
 
@@ -163,7 +163,7 @@ function circleClick (index) {
     var children = document.getElementById("experience_list").children;
     var rect = children[index].getBoundingClientRect();
     // account for existing scroll to get correct scroll_distance to plug into scrollTo
-    var scrollLeft = window.pageXOffset || document.getElementById("experience_list").scrollLeft;
+    var scrollLeft = window.pageXOffset || document.getElementById("experience_list").scrollLeft || document.body.scrollLeft || 0;
 
     var scroll_distance = rect.left + scrollLeft; 
 
