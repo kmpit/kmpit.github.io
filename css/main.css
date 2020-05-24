@@ -178,6 +178,15 @@ iframe.snapwidget-widget {
 /************************************************************************************************************************/
 /*Generic components----------------------------------------------------------------------------------------------------*/
 /************************************************************************************************************************/
+/* Captions----------------------------------------------------------------------------------------*/
+p.caption {
+	color: grey;
+	font-style: italic;
+	text-align: center;
+	font-size: 0.8em;
+	margin-bottom: 0.3em;
+}
+
 
 /*buttons------------------------------------------------------------------------------------------*/
 div.button {	
@@ -213,6 +222,11 @@ div.side_list::after { /* forms right border / timeline */
 	bottom: 0;
 	left: 100%;
 	margin-left: -2px;
+	-ms-overflow-style: none;
+
+}
+div.side_list::-webkit-scrollbar {
+	display: none;
 }
 
 div.list_item {
@@ -477,23 +491,11 @@ td.right {
 
 a.intext { 
 	text-decoration: underline;
-	/* text-decoration-color:var(--flower-yellow); */
 	color: inherit;
-	/* color: rgb(80, 127, 255); */
-	/* box-shadow:
-    	inset 0 -0.15em white,
-    	inset 0 -0.4em var(--pink);
-	display: inline; */
 }
 a.intext:hover{ 
 	font-weight:bold;
-	/*	box-shadow:
-    	inset 0 -0.15em white,
-		inset 0 -0.4em var(--dark-pink); */
 }
-/* a.intext:visited{
-	color: grey;
-} */
 	
 
 /*Images---------------------------------------------------------------------------------------------*/	
@@ -614,7 +616,7 @@ div.button.menu_button.option {
 
 #foreground {	
 	position: absolute;
-	width: 50%;
+	/* width: 50%; */
 	min-width: 60vh;
 	margin: 0 auto;
 	top: 50%;
@@ -640,7 +642,7 @@ div.button.menu_button.option {
 	float: left;
 	margin: auto 0;
 
-	width:30vw;
+	width:40%;
 	max-width: 400px;
 
 	padding-right: 6vw;
@@ -666,7 +668,7 @@ div.button.menu_button.option {
 	text-align: left; }
 
 #experience_list {
-	width: 32%;	
+	width: 36%;	
 	margin-right: 5%; }
 
 #experience_display {
@@ -674,7 +676,7 @@ div.button.menu_button.option {
 	padding-left: 5%;
 	border-width: 4px; 
 	border-color: var(--light-blue);
-	width:55%; 
+	width:51%; 
 }
 
 #camp_img {
@@ -693,11 +695,10 @@ div.button.menu_button.option {
 
 /* Projects ----------------------------------------------------------------------------------*/
 
-
-/* Break 3 */
-/* #break_3{
-	background-image: url("../images/bike.jpg");
-} */
+#exp1 {
+	margin-bottom: 0em;
+	padding-bottom: 0.5em; 
+}
 
 
 /*Skills-------------------------------------------------------------------------------------*/
@@ -748,11 +749,11 @@ img.logo:hover {
 /***********************************************************************************************************/
 
 /* Mobile in general */
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-width: 1366px) {
 	body {
 		font-size: 20px;	}
 	h1 {
-		font-size:2.5em;	}
+		font-size:2.4em;	}
 
 	div.x_button_container {
 		margin-right: 5%;
@@ -771,13 +772,8 @@ img.logo:hover {
 		max-width: 70vh;
 }
 
-	#aboutme_para {
-		padding-top:0;
-	}
-}
-
 /* Mobile - excluding most tablets */
-@media only screen and (max-device-width: 850px){
+@media only screen and (max-width: 850px){
 	div.button.menu_button.option { 
 		/*show menu buttons across the top so they don't cover content*/
 		float:none;
@@ -820,6 +816,41 @@ img.logo:hover {
 		display: inline-block;
 	}
 
+	div.row {
+		display: block;
+	}
+
+	div.card {
+		width: 92%;
+		overflow: auto;
+		height: auto;
+		display: block;
+	}
+	div.card.left, div.card.right {
+		clear: none;
+		float: none;
+		margin-left: 0.5em;
+		margin-right: 0;
+	}
+
+	div.card_img {
+		max-width: 92%;
+		position: static;
+		top: 0;
+		-webkit-transform: translateY(0%);
+		transform: translateY(0%);
+
+		margin-left: 4%;
+		margin-right: 4%;
+		margin-bottom: 0.5em;
+	}
+	div.card_text {
+		width: 92%;
+		margin-left: 4%;
+		float: none;
+		display: inline-block;
+	}
+
 	#life_list div.list_item {
 		padding-bottom: 0.25em;
 		background-image: none;
@@ -833,10 +864,14 @@ img.logo:hover {
 		width: 100%; 
 		padding-left: 0;
 	}
+
+	#aboutme_para {
+		max-width: none;
+	}
 }
 
 /* Mobile landscape */
-@media only screen and (max-device-width: 1366px) and (orientation: landscape){
+@media only screen and (max-width: 900px) and (orientation: landscape){
 	h1 { 
 		font-size:2em; }
 
@@ -853,12 +888,16 @@ img.logo:hover {
 	#foreground {
 		max-width: 70vw;
 	}
+
+	#about {
+		width: 75%;
+	}
 	
 
 }
 
 /* Mobile portrait */
-@media only screen and (max-device-width: 1360px) and (orientation: portrait){
+@media only screen and (max-width: 1360px) and (orientation: portrait){
 	div.section_wrapper {	
 		width: 80%;
 		max-width: 80%;	
@@ -886,9 +925,9 @@ img.logo:hover {
 	}
 
 	div.modal {
-		width: 70%;
+		width: 80%;
 		height: 85%;	
-		margin: 5% 10% 5% 10%;
+		margin: 5% 5% 5% 5%;
 		padding-top: 5vh;
 	}
 
@@ -900,8 +939,6 @@ img.logo:hover {
 		position: static;
 		-webkit-transform: translateY(0%);
 		transform: translateY(0%);
-		max-width: none;
-		width: 40vw;
 	}
 
 	#footer {
@@ -912,10 +949,11 @@ img.logo:hover {
 
 
 /* Mobile portrait- excluding most tablets*/
-@media only screen and (max-device-width: 700px) and (orientation: portrait){
+@media only screen and (max-width: 700px) and (orientation: portrait){
 	img.single {
 		display:block;
 		width: 100%;
+		max-width: 100%;
 	}
 	img.single.small, img.single.wide {
 		display:block;
@@ -936,32 +974,6 @@ img.logo:hover {
 		width: 85%;
 	}
 
-	div.card {
-		width: 96%;
-		overflow: auto;
-		height: auto;
-		display: block;
-	}
-	div.card.left {
-		clear: none;
-	}
-
-	div.card_img {
-		max-width: 92%;
-		position: static;
-		top: 0;
-
-		margin-left: 4%;
-		margin-right: 4%;
-		margin-bottom: 0.5em;
-	}
-	div.card_text {
-		width: 92%;
-		margin-left: 4%;
-		float: none;
-		display: inline-block;
-	}
-
 	#aboutme_para {
 		width: 100%;
 		position: static;
@@ -976,17 +988,36 @@ img.logo:hover {
 }
 
 /* desktop -  small  */
-@media (max-device-width: 1030px){
-	div.card {
-		width: 98%;
+@media (max-width: 1100px) and (min-width: 850px){
+	div.section_wrapper {
+		width: 90%;
 	}
+
+	div.row {
+		display: block;
+	}
+
+	div.card {
+		width: 96%;
+		overflow: auto;
+		height: auto;
+		display: block;
+	}
+	
+	div.card.left, div.card.right {
+		clear: none;
+		float: none;
+		margin-left: 1em;
+		margin-right: 0;
+	}
+
 	div.card_img {
 		position: static;
-		top: 0;
+		float: left;
 		-webkit-transform: translateY(0%);
 		transform: translateY(0%);
-		float: left;
 	}
+	
 
 }
 
