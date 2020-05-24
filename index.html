@@ -264,79 +264,87 @@
 		<div class = "section_wrapper" id = "project_section" >
 			<h2>Projects</h2>
 
-			<div id = "flex" class = "card left" onclick = "projectClick(this)">
-				<div class = "card_content">
-					<div class = "card_img">
-						<img src = "images/flex-project.png">
+			<div class = "row">
+
+				<div id = "flex" class = "card left" onclick = "projectClick(this)">
+					<div class = "card_content">
+						<div class = "card_img">
+							<img src = "images/flex-project.png">
+						</div>
+						<div class = "card_text">
+							<h3>Personal Website</h3>
+							<p>Designing and developing a fully responsive site to hone the skills I'm passionate about.</p>
+						</div>
 					</div>
-					<div class = "card_text">
-						<h3>Personal Website</h3>
-						<p>Designing and developing a fully responsive site to hone the skills I'm passionate about.</p>
+				</div>
+
+				<div id = "mic" class = "card right" onclick = "projectClick(this)">
+					<div class = "card_content">
+						<div class = "card_img">
+							<img src = "images/audio-circuit.jpg">
+						</div>
+						<div class = "card_text">
+							<h3>Audio Processor</h3>
+							<p>I applied new skills in circuit design to create a high-performing signal processing circuit!</p>						
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<div id = "mic" class = "card right" onclick = "projectClick(this)">
-				<div class = "card_content">
-					<div class = "card_img">
-						<img src = "images/audio-circuit.jpg">
-					</div>
-					<div class = "card_text">
-						<h3>Audio Processor</h3>
-						<p>I applied new skills in circuit design to create a high-performing signal processing circuit!</p>						
-					</div>
+			<div class = "row">
+				<div id = "info" class = "card left" onclick = "projectClick(this)">
+					<div class = "card_content">
+						<div class = "card_img">
+							<img src = "images/FAQ.PNG">
+						</div>
+						<div class = "card_text">
+							<h3>Info Design</h3>
+							<p>I excel at communicating info in concise, compelling ways, with keen attention to detail and a strong awareness of the user.</p>
+						</div>
+					</div>				
 				</div>
-				
-			</div>
-			<div id = "info" class = "card left" onclick = "projectClick(this)">
-				<div class = "card_content">
-					<div class = "card_img">
-						<img src = "images/FAQ.PNG">
-					</div>
-					<div class = "card_text">
-						<h3>Info Design</h3>
-						<p>I excel at communicating info in concise, compelling ways, with keen attention to detail and a strong awareness of the user.</p>
-					</div>
-				</div>				
-			</div>
 
-			<div id = "flex" class = "card right" onclick = "projectClick(this)">
-				<div class = "card_content">
-					<div class = "card_img">
-						<img src = "images/flex-project.png">
-					</div>
-					<div class = "card_text">
-						<h3>CIBC Flex Project</h3>
-						<p>Ultimately selected for further development, this innovative solution was the result of thoughtful UX and product research.</p>
+				<div id = "flex" class = "card right" onclick = "projectClick(this)">
+					<div class = "card_content">
+						<div class = "card_img">
+							<img src = "images/flex-prototype.png">
+						</div>
+						<div class = "card_text">
+							<h3>CIBC Flex Project</h3>
+							<p>Ultimately selected for further development, this innovative solution was the result of thoughtful UX and product research.</p>
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<div id = "operation" class = "card left" onclick = "projectClick(this)">
-				<div class = "card_content">
-					<div class = "card_img">
-						<img src = "images/operation_circuit.jpg">
+			<div class = "row">
+				<div id = "operation" class = "card left" onclick = "projectClick(this)">
+					<div class = "card_content">
+						<div class = "card_img">
+							<img src = "images/operation_circuit.jpg">
+						</div>
+						<div class = "card_text">
+							<h3>Arduino/C Game</h3>
+							<p>The game of Operation is twice as fun when you bring Arduinos, C, and I2C into the equation.</p>
+						</div>
 					</div>
-					<div class = "card_text">
-						<h3>Electronic Game</h3>
-						<p>The game of Operation is twice as fun when you bring Arduinos, C, and I2C into the equation.</p>
+					
+				</div>
+	
+				<div id = "watoplan" class = "card right" onclick = "projectClick(this)">
+					<div class = "card_content">
+						<div class = "card_img">
+							<img src = "images/watoplan-2.PNG">
+						</div>
+						<div class = "card_text">
+							<h3>What-to-Plan</h3>
+							<p>Leveraging iterative design, user research, and 3D product design to tackle pain points related to time management.</p>
+						</div>
 					</div>
 				</div>
-				
 			</div>
 
-			<div id = "watoplan" class = "card right" onclick = "projectClick(this)">
-				<div class = "card_content">
-					<div class = "card_img">
-						<img src = "images/watoplan-2.PNG">
-					</div>
-					<div class = "card_text">
-						<h3>Time Management System</h3>
-						<p>Leveraging iterative design, user research, and 3D product design to tackle a critical student problem.</p>
-					</div>
-				</div>
 
-			</div>
 
 			<div id = "mic_content" style = "display: none;"> 
 				<h3>Audio Processor</h3>
@@ -363,8 +371,8 @@
 				<h3>Info Design</h3>
 				<p>I excel at communicating info in concise, compelling ways, with keen attention to detail and a strong awareness of the user.</p>
 				<h5>FAQs for Social Media</h5>
-				<p>As President of the Unaccompanied Minors a cappella group, I created this series of FAQs regarding auditions. 
-					We shared them via Instagram, sparking high viewer engagement and starting conversations with prospective members!
+				<p>As President of the Unaccompanied Minors a cappella group, I created a series of 6 FAQs regarding auditions. 
+					We shared them via Instagram Stories, sparking high viewer engagement and starting conversations with prospective members!
 				</p>
 				<img class = "side_by_side third" src = "images/projects/info/faq1.png">
 				<img class = "side_by_side third" src = "images/projects/info/faq2.png">
@@ -383,9 +391,13 @@
 				</a>
 
 
-				<h5>Indigo / Misfit: Art Zine</h5>
-				<p>This personal project focused on minimalist graphic design and visual art. 
-					For this zine, I stretched my creativity by creating multiple pieces of art from a single base drawing.
+				<h5>Indigo, Misfit: Art Zine</h5>
+				<p>I love visual art - you can see plenty of examples over on my 
+					<a class = "intext" href = "https://www.instagram.com/nim_chimpsky_fan_account/" target = "_blank">
+						art Instagram
+					</a>.
+					One of my recent projects was this 'zine, focused on minimalist graphic design. 
+					In this project, I really stretched my creativity by creating multiple pieces of art from a single base drawing.
 					View the complete PDF 
 					<a class = "intext" href ="./assets/Indigo Misfit - Zine.pdf" download target = "_blank">
 						here</a>.
@@ -412,11 +424,13 @@
 					<li>Took on product management role, guiding establishment of decision criteria and expected results and networking across business units to determine feasibility and business benefits</li>
 					<li>Composed and delivered highly praised pitch presentation, plus in-depth research report, to company executives</li>
 				</ul>
-				<img class = "single wide" src = "images/presentation.PNG">					
+				<img class = "single wide" src = "images/flex-prototype.png">	
+				<img class = "single wide" src = "images/flex-research.png">					
+				
 			</div>
 
 			<div id = "operation_content" style = "display: none;"> 
-				<h3>Electronic Game</h3>
+				<h3>Arduino/C Game</h3>
 				<h4>UW | July 2018</h4>
 				<p>The game of Operation is twice as fun when you bring Arduinos, C, and I2C into the equation.</p>
 				<p><strong>Skills: </strong> Digital circuit design, interrupts, timers, I2C, complex state logic, LED matrix design</p>
@@ -442,9 +456,9 @@
 
 			</div>
 			<div id = "watoplan_content" style = "display: none;"> 
-				<h3>Time Management System<h3>
+				<h3>What-to-Plan<h3>
 				<h4>UW | Fall 2017</h4>
-				<p>Leveraging iterative design, user research, and 3D product design to tackle a critical student problem.</p>
+				<p>Leveraging iterative design, user research, and 3D product design to tackle pain points related to time management.</p>
 				<p><strong>Skills: </strong>Problem definition, user research (surveys), physical product design, usability testing</p>
 				<p><strong>Tools: </strong>Iterative design process, QFD, persona, Solidworks, 3D printing</p>
 				<p><strong>Collaborators: </strong>Conrad Heidebrecht, Katrina Hermanns, Sylvia George, Jack Yu, Vlad Hociota</p>
@@ -516,8 +530,9 @@
 						</td>
 						<td>
 							<div>
-								<p><b>Frontend development </b> HTML • CSS • JavaScript • Typescript • Angular • Material • i18n</p>
-								<p><b>Object-oriented programming </b> C/C++ • Python</p>
+								<p><b>Frontend web development </b> HTML • CSS • JavaScript • Typescript • Angular • Material • i18n</p>
+								<p><b>Backend web development </b>PHP • phpMyAdmin • SQL • Database manipulation • API and microservice programming and testing</p>
+								<p><b>Additional object-oriented programming</b> C/C++ • Java • Python</p>
 								<p><b>Scrum leadership </b> Agile • Jira • Confluence</p>
 							</div>
 						</td>
@@ -528,23 +543,23 @@
 						</td>
 						<td>
 							<div>
-								<p><b>UX/UI design </b>Iterative, systems-based design process</p>
+								<p><b>UX/UI design </b>Iterative, systems-based design process • Sketching and prototyping • Design sprints</p>
 								<p><b>User research </b> User interviews • Usability testing • Concept testing • 
-									Qual/quant data analysis • Looker • Tableau</p>
+									Qual/quant data analysis • Looker • Tableau • Synthesis of findings</p>
 								<p><b>Wireframing </b>Figma • InVision  |  <b>Graphic design</b></p>
-								<p><b>Design communication </b>Design workshops • Personas • Concept Maps • Report creation and presentation • Initiative planning</p>
+								<p><b>Design communication </b>Workshops • Personas • Concept Maps • Decks • Presentations • Initiative planning</p>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td class = "right">
-							<h4>DevOps</h4>
+							<h4>DevOps + Testing</h4>
 						</td>
 						<td>
 							<div>
-								<p><b>Environment management </b> Shell scripting • Docker • Kubernetes </p>
-								<p><b>CI unit testing </b> Karma • Jasmine</p>
-								<p><b>QA + regression testing  |  CORS</b></p>
+								<p><b>Environment management </b> Shell scripting • Docker • Kubernetes • Node.js • JSON • YAML • Redis • S3</p>
+								<p><b>Unit testing </b> Karma • Jasmine &nbsp | &nbsp <b>CICD </b>Bitbucket pipelines</p>
+								<p><b>QA + regression testing</b>  &nbsp | &nbsp <b> CORS</b></p>
 							</div>
 						</td>
 					</tr>
@@ -643,7 +658,7 @@
 			<h2>Let's talk!</h2>
 			<p>Ready to do great things together? Shoot me en 
 				<a class = "intext" href = "mailto:kimberley.pita@gmail.com">email!</a>
-			<br>TL;DR? View my resume
+			<br>You can also take a look at my resume
 				<a class = "intext" href="./assets/Kim Pita - Resume.pdf" download target = "_blank">here</a>.
 			</p>
 			<a href="mailto:kimberley.pita@gmail.com">
