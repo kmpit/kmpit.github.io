@@ -624,7 +624,7 @@ div.button.menu_button.option {
 #about {
 	width: 65%;
 	position: relative;
-	min-height: 18em; /* prevent collapse on really short screens (e.g. mobile on side)*/
+	min-height: 20em; /*prevent collapse on really short screens (e.g. mobile on side)*/
 }
 #aboutme_para {
 	display: block;
@@ -647,14 +647,6 @@ div.button.menu_button.option {
 	right: 0;
 	float: right;
 }
-
-
-
-/* Break 1 */
-/* #break_1{
-	background-image: url("../images/yellow_flowers.jpg");
-} */
-
 
 /* Experience ------------------------------------------------------------------------------------*/
 #experience_section {
