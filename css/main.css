@@ -624,7 +624,7 @@ div.button.menu_button.option {
 #about {
 	width: 65%;
 	position: relative;
-	min-height: 20em; /*prevent collapse on really short screens (e.g. mobile on side)*/
+	min-height: 22em; /*prevent collapse on really short screens (e.g. mobile on side)*/
 }
 #aboutme_para {
 	display: block;
@@ -866,6 +866,10 @@ img.logo:hover {
 
 	#foreground {
 		max-width: 70vw;
+	}
+
+	div.subtitle p {
+		font-size: 0.9em;
 	}
 
 	#about {
