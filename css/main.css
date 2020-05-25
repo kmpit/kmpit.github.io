@@ -125,44 +125,11 @@ div.section_break {
 	position: relative; 
 }
 
-/*
-div.section_break_solid {
-	width:100%;
-	height:1vh;
-	background-color: var(--light-blue);
-	display: none;
-} */
 
 /* Container with a nice line along the bottom ------------------------------------------------*/
 div.souslined {
 	border-bottom: 3px solid white;
 }
-
-/* div.column {
-	float: left;
-	width: 47.5%;
-	text-align: left;
-	margin-left: 5%;
-}
-div.column.first {
-	margin-left: 0;
-} */
-
-
-/* div.video_container {
-	width: 100%;
-	max-width: 35em;
-	margin: 0 auto;
-	height: 0;
-	padding-bottom: 56.25%;
-	position: relative;
-}
-iframe.video_embed {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-} 
-*/
 
 /* Iframe for the instagram widget -----------------*/
 iframe.snapwidget-widget {
@@ -178,6 +145,7 @@ iframe.snapwidget-widget {
 /************************************************************************************************************************/
 /*Generic components----------------------------------------------------------------------------------------------------*/
 /************************************************************************************************************************/
+
 /* Captions----------------------------------------------------------------------------------------*/
 p.caption {
 	color: grey;
@@ -262,15 +230,12 @@ div.list_item::after { /* points on timeline */
 div.list_item:hover {
 	cursor: pointer; 
 	margin-left: 0.2em; 
-	/*is this gucci? wanted to better show hover/selection considering the only difference before was bolding the text */
 }
 div.list_item:hover h3 {
 	font-weight: bold; 
-	/* font-size: 1.3em;  */
 }
 div.list_item:hover h4 {
 	font-weight: bold; 
-	/* font-size: 0.9em; */
 }
 div.list_item:hover::after {
 	background-color:var(--light-yellow);
@@ -285,7 +250,6 @@ div.list_item.selected {
 div.list_item.selected h3 {
 	color: white;
 	font-weight: bold; 
-	/* font-size: 1.4em; */
 }
 div.list_item.selected h4 {
 	color: white;
@@ -335,7 +299,6 @@ div.circle.selected {
 div.row {
 	display: flex;
 	float: left;
-
 }
 
 div.card {
@@ -479,9 +442,6 @@ td.right {
 
 					
 /*Links----------------------------------------------------------------------------------------------------------*/
-/* a {
-	color: var(--dark-blue); } */
-
 a.intext { 
 	text-decoration: underline;
 	color: inherit;
@@ -609,7 +569,6 @@ div.button.menu_button.option {
 
 #foreground {	
 	position: absolute;
-	/* width: 50%; */
 	min-width: 60vh;
 	margin: 0 auto;
 	top: 50%;
@@ -672,12 +631,6 @@ div.button.menu_button.option {
 }
 
 
-/* Break 2 */
-/* #break_2{
-	background-image: url("../images/tree-cropped.jpg");
-} */
-
-
 /* Projects ----------------------------------------------------------------------------------*/
 
 #exp1 {
@@ -694,12 +647,6 @@ div.button.menu_button.option {
 
 #life h3 {
 	margin-bottom: 0.5em; }
-
-
-/* Break 4 */
-/* #break_4 {
-	background-image: url("../images/whiteflower_sky.jpg");
-} */
 
 
 
@@ -754,7 +701,7 @@ img.logo:hover {
 	#foreground {
 		width: 80%;
 		min-width: 0;
-		max-width: 70vh;
+		max-width: 70vh;}
 }
 
 /* Mobile - excluding most tablets */
@@ -1017,4 +964,4 @@ img.logo:hover {
 	div.section_break {
 		background-attachment: scroll;
 	}
-  }
+}
