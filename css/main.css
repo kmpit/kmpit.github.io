@@ -698,6 +698,10 @@ img.logo:hover {
 		margin-left: 0;
 	}
 
+	div.section_break {
+		background-attachment: scroll;
+	}
+
 	#foreground {
 		width: 80%;
 		min-width: 0;
@@ -955,13 +959,4 @@ img.logo:hover {
 @viewport {
 	width: device-width ;
 	zoom: 1.0 ;
-}
-
-
-
-/** Safari on iOS quick fix **/
-@supports (-webkit-touch-callout: none) {
-	div.section_break {
-		background-attachment: scroll;
-	}
 }
