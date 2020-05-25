@@ -133,7 +133,7 @@ function onListScroll (){
             var left = rect.left; 
     
             // open the first list item that is scrolled into view and exit
-            if (!found && left > -20 ){
+            if (!found && left > 0 ){
                 found = true;
                 index = i;
                 console.log('index is', index);
