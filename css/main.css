@@ -122,6 +122,8 @@ div.section_break {
 	background-position: 20%;
 	background-repeat: no-repeat;
 	background-size: cover; 
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
 	position: relative; 
 }
 
@@ -698,7 +700,7 @@ img.logo:hover {
 		margin-left: 0;
 	}
 
-	div.section_break {
+	div.section_break, #titleblock {
 		background-attachment: scroll;
 	}
 
