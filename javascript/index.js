@@ -114,44 +114,59 @@ function openDisplay(caller, section){
 
 // Small windows only: event listener for when user scrolls through the selection list 
 
-document.getElementById("experience_list").addEventListener("scroll", function(event) {
+document.getElementById("experience_list").addEventListener("scroll", throttle(onListScroll, 100));
 
-    // all the list items
-    var children = document.getElementById("experience_list").children;
 
-    // track whether the item the user has scrolled to is found
-    var found = false;
-    var index = 0; // the index of the chosen item
+function onListScroll (){
+    console.log ('got to here');
+        // all the list items
+        var children = document.getElementById("experience_list").children;
 
-    for (var i = 0; i < children.length; i++){
-
-        // get starting position of each list item
-        var rect = children[i].getBoundingClientRect();
-        var left = rect.left; 
-
-        // open the first list item that is scrolled into view and exit
-        if (!found && left > 0){
-            found = true;
-            index = i;
-            console.log('index is', index);
-            openDisplay(children[i], 'experience');
+        // track whether the item the user has scrolled to is found
+        var found = false;
+        var index = 0; // the index of the chosen item
+    
+        for (var i = 0; i < children.length; i++){
+    
+            // get starting position of each list item
+            var rect = children[i].getBoundingClientRect();
+            var left = rect.left; 
+    
+            // open the first list item that is scrolled into view and exit
+            if (!found && left > -20 ){
+                found = true;
+                index = i;
+                console.log('index is', index);
+                openDisplay(children[i], 'experience');
+            }
         }
+    
+        // highlight the circle corresponding to the item 
+        console.log('here i am');
+        circles = document.getElementById("exp_page_indicator").children;
+        for (var j = 0; j < circles.length; j++){
+            // unhighlight previous selection
+            if (circles[j].className == "circle selected"){
+                circles[j].className = circles[j].className.replace(" selected", "");
+            }
+            //highlight circle for new selection
+            if (j == index){
+                circles[j].className+=" selected";
+            }
+         }
+}
+
+
+/* Throttle function to prevent scroll from firing all the time; thanks to camilo reyes on sitepoint!*/
+function throttle(fn, wait) {
+    var time = Date.now();
+    return function() {
+      if ((time + wait - Date.now()) < 0) {
+        fn();
+        time = Date.now();
+      }
     }
-
-    // highlight the circle corresponding to the item 
-    console.log('here i am');
-    circles = document.getElementById("exp_page_indicator").children;
-    for (var j = 0; j < circles.length; j++){
-        // unhighlight previous selection
-        if (circles[j].className == "circle selected"){
-            circles[j].className = circles[j].className.replace(" selected", "");
-        }
-        //highlight circle for new selection
-        if (j == index){
-            circles[j].className+=" selected";
-        }
-     }
-});
+  }
 
 // Mobile-only: onclick function for the page indicator 
 
@@ -169,9 +184,6 @@ function circleClick (index) {
 
     // scroll the list to the desired element and the scroll event listener will update the display
     document.getElementById('experience_list').scrollTo(scroll_distance, 0);
-
-    circles = document.getElementById("exp_page_indicator").children;
-    circles[index].className+=" selected";
 }
 
 

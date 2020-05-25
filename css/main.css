@@ -724,7 +724,7 @@ img.logo:hover {
 		/*Chrome and Safari*/
 		scroll-snap-type: x mandatory;
 
-		scroll-behavior: auto;
+		/* scroll-behavior: auto; */
 		-webkit-overflow-scrolling: touch;
 		scroll-snap-destination: 0 0;
 	}
