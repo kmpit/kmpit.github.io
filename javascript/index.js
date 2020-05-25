@@ -178,7 +178,7 @@ function circleClick (index) {
     var children = document.getElementById("experience_list").children;
     var rect = children[index].getBoundingClientRect();
     // account for existing scroll to get correct scroll_distance to plug into scrollTo
-    var scrollLeft = window.pageXOffset || document.getElementById("experience_list").scrollLeft || document.body.scrollLeft || 0;
+    var scrollLeft = document.getElementById("experience_list").scrollLeft;
 
     var scroll_distance = rect.left + scrollLeft; 
 
