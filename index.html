@@ -81,6 +81,11 @@
 							<h4>Contact</h4>
 						</div>
 					</a>
+					<a href="#project_section">
+						<div class = "button" float = "right">
+							<h4>Portfolio</h4>
+						</div>
+					</a>
 				</div>
 
 			</div>
@@ -97,7 +102,7 @@
 					<a class="intext" href="#footer" >Let's talk</a> 
 					about what we can build together! Scroll down to check out my experience, past work, and skills, 
 					or check out my 
-					<a class = "intext" href="./assets/Kim Pita - Resume.pdf" download target = "_blank">resume</a>. 
+					<a class = "intext" href="./assets/Kimberley Pita - Resume.pdf" target = "_blank">resume</a>. 
 				</p>
 			</div>
 			<div id = "aboutme_image" float = "right">
@@ -292,19 +297,33 @@
 			</div>
 
 			<div class = "row">
-				<div id = "info" class = "card left" onclick = "projectClick(this)">
+				<div id = "FAQ" class = "card left" onclick = "projectClick(this)">
 					<div class = "card_content">
 						<div class = "card_img">
-							<img src = "images/FAQ.PNG">
+							<img src = "images/faq_cover.png">
 						</div>
 						<div class = "card_text">
-							<h3>Info Design</h3>
-							<p>I excel at communicating info in concise, compelling ways, with keen attention to detail and a strong awareness of my audience.</p>
+							<h3>FAQ for Social Media</h3>
+							<p>Answering common questions about auditioning for a cappella in concise, compelling Instagram stories.</p>
 						</div>
 					</div>				
 				</div>
 
-				<div id = "flex" class = "card right" onclick = "projectClick(this)">
+				<div id = "article_summary" class = "card right" onclick = "projectClick(this)">
+					<div class = "card_content">
+						<div class = "card_img">
+							<img src = "images/article_summary_cover.png">
+						</div>
+						<div class = "card_text">
+							<h3>Design Article One-Pager</h3>
+							<p>After reading a fascinating article about word-of-mouth and mobile apps, I synthesized the key ideas into this neat one-pager.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class = "row">
+				<div id = "flex" class = "card left" onclick = "projectClick(this)">
 					<div class = "card_content">
 						<div class = "card_img">
 							<img src = "images/flex-prototype.png">
@@ -312,6 +331,17 @@
 						<div class = "card_text">
 							<h3>CIBC Flex Project</h3>
 							<p>Ultimately selected for further development, this innovative solution was the result of thoughtful UX and product research.</p>
+						</div>
+					</div>
+				</div>
+				<div id = "zine" class = "card right" onclick = "projectClick(this)">
+					<div class = "card_content">
+						<div class = "card_img">
+							<img src = "images/zine_cover.png">
+						</div>
+						<div class = "card_text">
+							<h3>Indigo, Misfit: Art Zine</h3>
+							<p>A collection of paintings and drawings, all derived from the same base image and structured together with minimalistic graphic design.</p>
 						</div>
 					</div>
 				</div>
@@ -349,8 +379,9 @@
 				<h3>Personal Website<h3>
 				<h4>Apr - May 2020</h4>
 				<p>Designing and developing a fully responsive site to hone the skills I'm passionate about.</p>
-				<p><strong>Skills: </strong>Design for mobile & desktop, copywriting, responsive frontend web development</p>
-				<p><strong>Tools: </strong>Dev: HTML, CSS, JS; Design: Pen and paper, Figma</p>
+
+				<p><strong>Skills: </strong>Design for mobile & desktop, copywriting, responsive frontend web development
+				<br><strong>Tools: </strong>Dev: HTML, CSS, JS; Design: Pen and paper, Figma</p>
 	
 				<p>In creating this site, I've leveled up my design and development skills in so many ways.
 					Here's a bit of my process:
@@ -426,9 +457,9 @@
 					a field that interests me, vocal music.
 				</p>
 
-				<p><strong>Skills: </strong>Signal processing, op-amp circuit design and prototyping, testing/ debugging, technical research</p>
-				<p><strong>Tools: </strong>Analog circuitry, Multisim</p>
-				<p><strong>Collaborator: </strong>Amy Lu</p>
+				<p><strong>Skills: </strong>Signal processing, op-amp circuit design and prototyping, testing/ debugging, technical research
+				<br><strong>Tools: </strong>Analog circuitry, Multisim
+				<br><strong>Collaborator: </strong>Amy Lu</p>
 
 				<ul>
 					<li>Designed and built circuit that conditions microphone input with the preferred frequency response for vocal music</li>
@@ -440,56 +471,79 @@
 				</ul>
 				<img class = "single wide" src = "images/mic_output.png">
 			</div>
-			<div id = "info_content" style = "display: none;"> 
-				<h3>Info Design</h3>
-				<p>I excel at communicating info in concise, compelling ways, with keen attention to detail and a strong awareness of my audience.</p>
-				<h5>FAQs for Social Media</h5>
-				<p>As President of the Unaccompanied Minors a cappella group, I created a series of 6 FAQs regarding auditions. 
-					We shared them via Instagram Stories, sparking high viewer engagement and starting conversations with prospective members!
-				</p>
-				<img class = "side_by_side third" src = "images/projects/info/faq1.png">
-				<img class = "side_by_side third" src = "images/projects/info/faq2.png">
-				<img class = "side_by_side third" src = "images/projects/info/faq3.png">
+			<div id = "FAQ_content" style = "display: none;"> 
+				<h3>FAQs for Social Media</h3>
+				<h4>Unaccompanied Minors A Cappella | SEP 2019</h4>
+				<p>Answering common questions about auditioning for a cappella in concise, compelling Instagram stories.</p>
 
-				<h5>Article Summary Infographic</h5> 
-				<p>I consolidated data from a formal academic article about user perceptions and word-of-mouth into 
-					<a class = "intext" 
-						href = "assets/Article Summary Infographic.pdf"
-						target = "_blank">this communicative infographic</a>.
-				</p>
-				<a class = "intext" 
-					href = "assets/Article Summary Infographic.pdf"
-					target = "_blank">
-						<img id = "infographic" class = "single wide" src = "images/projects/info/report_summary.JPG">
-				</a>
+				<p><strong>Skills: </strong>Copywriting, mobile design, social media
+				<br><strong>Tools: </strong>Figma</p>
+
+				<ul>
+					<li>Created series of FAQs to address 6 most common concerns about auditions, as President of a cappella group</li>
+					<li>Shared via Instagram stories, sparking high viewer engagement and starting conversations with prospective members</li>
+				</ul>
+				<div>
+					<img class = "side_by_side third" src = "images/projects/faq/faq1.png">
+					<img class = "side_by_side third" src = "images/projects/faq/faq2.png">
+					<img class = "side_by_side third" src = "images/projects/faq/faq3.png">
+				</div>
+				<div>
+					<img class = "side_by_side third" src = "images/projects/faq/faq4.png">
+					<img class = "side_by_side third" src = "images/projects/faq/faq5.png">
+					<img class = "side_by_side third" src = "images/projects/faq/faq6.png">
+				</div>
+			</div>
+
+			<div id = "article_summary_content" style= "display: none;">
+				<h3>Design Article One-Pager</h3> 
+				<h4>UW | JUL 2019</h4>
+
+				<p>After reading a fascinating article about word-of-mouth and mobile apps, I synthesized the key ideas into this neat one-pager.</p>
+
+				<p><strong>Skills: </strong>Synthesis, information design
+				<br><strong>Tools: </strong>Powerpoint</p>
+		
+				<img id = "infographic" class = "single wide" src = "images/article_summary.png">
+	
+			</div>
 
 
-				<h5>Indigo, Misfit: Art Zine</h5>
+			<div id = "zine_content" style = "display: none;">
+
+				<h3>Indigo, Misfit: Art Zine</h3> 
+				<h4>Personal Project | NOV 2018</h4>
+
+				<p>A collection of paintings and drawings, all derived from the same base image and structured together with minimalistic graphic design.</p>
+
+				<p><strong>Skills: </strong>Visual art, graphic design
+				<br><strong>Tools: </strong>Publisher, pen & ink, watercolour, marker</p>
+		
 				<p>I love visual art - you can see plenty of examples over on my 
 					<a class = "intext" href = "https://www.instagram.com/nim_chimpsky_fan_account/" target = "_blank">
 						art Instagram
 					</a>.
-					One of my recent projects was this 'zine, focused on minimalist graphic design. 
-					In this project, I really stretched my creativity by creating multiple pieces of art from a single base drawing.
+					I created this zine to stretch my creativity, to celebrate two artists I admire, 
+					and to try out a minimalistic approach to information design. 
+				</p>
+				<p>
 					View the complete PDF 
 					<a class = "intext" href ="./assets/Indigo Misfit - Zine.pdf" download target = "_blank">
 						here</a>.
 				</p>
 
-				<a href ="./assets/Indigo Misfit - Zine.pdf" download target = "_blank">
-					<img class = "single small" src = "images/projects/info/zine.PNG">
-				</a>
-
-					
+				<img class = "single wide" src = "images/zine.PNG">	
 			</div>
+
 			<div id = "flex_content" style = "display: none;"> 
 				<h3>CIBC Flex Project</h3>
 				<h4>CIBC Digital | Dec 2018</h4>
 				<p>Ultimately selected for further development, this innovative solution was the result of thoughtful UX and product research.</p>
-				<p><strong>Skills: </strong>User research, product management, market / competitive research, report writing, presentation</p>
-				<p><strong>Tools: </strong>Alpha, Forrester, Confluence, PowerPoint</p>
-				<p><strong>Collaborators: </strong>Saatvik Walia, Katerina Salonikidou, Jon Dawson, Mavis Xiao</p>
-				<!-- <p><strong>Outcome: </strong>Concept selected for further investigation and development </p> -->
+
+				<p><strong>Skills: </strong>User research, product management, market / competitive research, report writing, presentation
+				<br><strong>Tools: </strong>Alpha, Forrester, Confluence, PowerPoint
+				<br><strong>Collaborators: </strong>Saatvik Walia, Katerina Salonikidou, Jon Dawson, Mavis Xiao</p>
+
 				<ul>
 					<li>Led cross-functional coop group in designing innovative solution with strong case for business and users</li>
 					<li>Headed full-scale user research initiative, involving 3 surveys and 650+ participants, to understand problem space, gather concept feedback, and inform iteration and next steps</li>
@@ -511,9 +565,10 @@
 				<h3>Arduino/C Game</h3>
 				<h4>UW | July 2018</h4>
 				<p>The game of Operation is twice as fun when you bring Arduinos, C, and I2C into the equation.</p>
-				<p><strong>Skills: </strong> Digital circuit design, interrupts, timers, I2C, complex state logic, LED matrix design</p>
-				<p><strong>Tools: </strong> 2 connected Ardunio Unos, Arduino C, digital circuitry</p>
-				<p><strong>Collaborator: </strong>Brynn Voigt</p>
+
+				<p><strong>Skills: </strong> Digital circuit design, interrupts, timers, I2C, complex state logic, LED matrix design
+				<br><strong>Tools: </strong> 2 connected Ardunio Unos, Arduino C, digital circuitry
+				<br><strong>Collaborator: </strong>Brynn Voigt</p>
 
 				<p>See the code 
 					<a class = "intext" 
@@ -521,7 +576,6 @@
 					target = "_blank">here</a>.
 				</p>
 
-				<!-- <p><strong>Outcome: </strong>Grade of 95%</p> -->
 				<ul>
 					<li>Created high-intensity electronic version of Operation using digital circuitry, Arduino microcontrollers, C programming</li>
 					<li>Developed complex logic and timing factors to calculate player rewards and speed up flashing LEDs across 19 possible states of game progression</li>
@@ -537,9 +591,10 @@
 				<h3>What-to-Plan<h3>
 				<h4>UW | Fall 2017</h4>
 				<p>Leveraging iterative design, user research, and 3D product design to tackle pain points related to time management.</p>
-				<p><strong>Skills: </strong>Problem definition, user research (surveys), physical product design, usability testing</p>
-				<p><strong>Tools: </strong>Iterative design process, QFD, persona, Solidworks, 3D printing</p>
-				<p><strong>Collaborators: </strong>Conrad Heidebrecht, Katrina Hermanns, Sylvia George, Jack Yu, Vlad Hociota</p>
+
+				<p><strong>Skills: </strong>Problem definition, user research (surveys), physical product design, usability testing
+				<br><strong>Tools: </strong>Iterative design process, QFD, persona, Solidworks, 3D printing
+				<br><strong>Collaborators: </strong>Conrad Heidebrecht, Katrina Hermanns, Sylvia George, Jack Yu, Vlad Hociota</p>
 
 				<ul>
 					<li>Created time management system in which users track to-dos using a mobile app and receive reminders in the form of light/audio notifications from portable, attachable notification beacons</li>
@@ -741,7 +796,7 @@
 			<p>Ready to do great things together? Shoot me en 
 				<a class = "intext" href = "mailto:kimberley.pita@gmail.com">email!</a>
 			<br>You can also take a look at my resume
-				<a class = "intext" href="./assets/Kim Pita - Resume.pdf" download target = "_blank">here</a>.
+				<a class = "intext" href="./assets/Kimberley Pita - Resume.pdf" target = "_blank">here</a>.
 			</p>
 			<a href="mailto:kimberley.pita@gmail.com"><img class="logo" src = "./images/email.png"></img></a>
 			<a href="https://linkedin.com/in/kimberley-pita" target="_blank"><img class="logo" src = "./images/LinkedIn.png"></img></a>
