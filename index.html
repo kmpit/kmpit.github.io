@@ -37,17 +37,14 @@
 				<a href="#about" onClick = "closeMenu()">
 					<div class="button menu_button option"><h4>About</h4></div>
 				</a>
-				<a href="#experience_section" onClick = "closeMenu()">
-					<div class="button menu_button option"><h4>Experience</h4></div>
-				</a>
 				<a href="#project_section" onClick = "closeMenu()">
 					<div class="button menu_button option"><h4>Projects</h4></div>
 				</a>
+				<a href="#experience_section" onClick = "closeMenu()">
+					<div class="button menu_button option"><h4>Experience</h4></div>
+				</a>
 				<a href="#life" onClick = "closeMenu()">
 					<div class="button menu_button option"><h4>Life</h4></div>
-				</a>
-				<a href="#skills" onClick = "closeMenu()">
-					<div class="button menu_button option"><h4>Skills</h4></div>
 				</a>
 				<a href = "#footer" onClick = "closeMenu()">
 					<div class="button menu_button option"><h4>Contact</h4></div>
@@ -62,30 +59,21 @@
 			<div id = "title_overlay">
 				<div id="foreground"> 
 					<header>
-						<div class = "souslined">
-							<h1>Kimberley Pita</h1>
-						</div>
+						<h1><span class = "whitelight">&nbsp;Kim Pita&nbsp</span></h1>
 						<div class = "subtitle">
-							<p>3A Systems Design Engineering, UW <br>
-								Designer • Developer</p>
-							<!-- <p id = 'current_term'></p> -->
+							<p><span class = "whitelight">&nbsp;UX Designer & Developer&nbsp;</span><br>
+								<span class = "whitelight">&nbsp;3B Systems Design Engineering @UWaterloo&nbsp;</span></p>
+						</div>
+						<div class = "button">
+							<h4>
+								<a class = 'intext' href="#project_section">
+									See my work
+							</a>
+							</h4>
+
 						</div>
 					</header>
-					<a href="https://github.com/kmpit" target="_blank">
-						<div class = "button" float = "left">
-							<h4>Github</h4>
-						</div>
-					</a>
-					<a href="#footer">
-						<div class = "button" float = "right">
-							<h4>Contact</h4>
-						</div>
-					</a>
-					<a href="#project_section">
-						<div class = "button" float = "right">
-							<h4>Portfolio</h4>
-						</div>
-					</a>
+
 				</div>
 
 			</div>
@@ -94,187 +82,52 @@
 
 		<!--About-->
 		<div class="section_wrapper" id = "about">
-			<div id = "aboutme_para">
-				<h2> Hi! I'm Kim.</h2>
-				<p>I’m a UX/UI designer and front-end developer hungry to solve problems, help people, 
-					and learn cool stuff on a Fall 2020 internship.
-				 <br><br>
-					<a class="intext" href="#footer" >Let's talk</a> 
-					about what we can build together! Scroll down to check out my experience, past work, and skills, 
-					or check out my 
-					<a class = "intext" href="./assets/Kimberley Pita - Resume.pdf" target = "_blank">resume</a>. 
-				</p>
-			</div>
-			<div id = "aboutme_image" float = "right">
-				<img src = "./images/portrait-2.png">
+			<div id = "about_content">
+				<div id = "aboutme_para">
+					<h2> Hi! I'm Kim.</h2>
+					<p>I’m a UX/UI designer and front-end developer hungry to solve problems, help people, and learn cool stuff on a Summer 2021 internship.</p>
+					<p> Scroll down to check out my past work; or, download my
+						<a class = "intext" href="./assets/Kim Pita_Resume.pdf" target = "_blank">resume</a>. 
+					</p>
+				</div>
+				<div id = "aboutme_image" float = "right">
+					<img src = "./images/portrait-2.png">
+				</div>
 			</div>
 		</div>
 
-		<div class = "blue_background">
-			<div class = "section_wrapper" id = "experience_section">
-				<h2>Experience</h2>
-	
-				<div id = "experience_list" class = "side_list">
-					<div id = "Avidbots" class = "list_item selected" onclick = "openDisplay(this, 'experience')">
-						<h3>DevOps and QA Lead</h3>
-						<h4>Avidbots | Jan - Apr 2020 </h4>
-					</div>
-					<div id = "PlanGrid" class = "list_item" onclick = "openDisplay(this, 'experience')">
-						<h3>UX Research</h3>
-						<h4>PlanGrid | May - Aug 2019 </h4>
-					</div>
-					<div id = "CIBC" class = "list_item" onclick = "openDisplay(this, 'experience')">
-						<h3>UX Research</h3>
-						<h4>CIBC | Sep - Dec 2018 </h4>
-					</div>
-					<div id = "Enable" class = "list_item" onclick = "openDisplay(this, 'experience')">
-						<h3>Training Development</h3>
-						<h4>Enable Education | Jan - Apr 2018 </h4>
-					</div>
-					<div id = "camp" class = "list_item" onclick = "openDisplay(this, 'experience')">
-						<h3>Counsellor</h3>
-						<h4>Camp Scugog | Jul 2016 - Aug 2018 </h4>
-					</div>
-					<div id = "Kumon" class = "list_item" onclick = "openDisplay(this, 'experience')">
-						<h3>Grader</h3>
-						<h4>Kumon | Nov 2015 - Jun 2017</h4>
-					</div>
-				</div>
-	
-				<div class = "page_indicator" id = "exp_page_indicator">
-					<div class = "circle selected" onclick = "circleClick(0)"></div>
-					<div class = "circle" onclick = "circleClick(1)"></div>
-					<div class = "circle" onclick = "circleClick(2)"></div>
-					<div class = "circle" onclick = "circleClick(3)"></div>
-					<div class = "circle" onclick = "circleClick(4)"></div>
-					<div class = "circle" onclick = "circleClick(5)"></div>
-	
-				</div>
-	
-				<div id = "experience_display" class = "display">
-					<div id = "Avidbots_content" class = "display_item">
-						<!-- <div style = "width: 100px; height: 10px; background-color: var(--flower-yellow); margin-bottom: 25px;"></div> -->
-						<p>
-							This past term, I joined the web team at 
-							<a class = "intext"
-								href = "https://www.avidbots.com/"
-								target = "_blank"> 
-								Avidbots</a>,
-							where I not only learned a ton but also made a big impact:</p>
-						<ul>
-							<li>Streamlined environment configuration process, decreasing manual steps from 22 to 8</li>
-							<li>Sped up unit tests more than 200% using parallelization, new libraries, CSS techniques</li>
-							<li>Further improved dev experience and code functionality by configuring cross-origin access, updating Angular versions</li>
-							<li>Uncovered numerous bugs; played major role coordinating with developers and product managers to ensure 
-								prompt resolution </li>
-							<li>Took initiative to improve the site by fixing bugs and deficiencies firsthand</li>
-							<li>Led successful two-week sprint as Agile scrum master and meeting director</li>						
-						</ul>
-	
-						
-					
-					</div>
-	
-					<div id = "PlanGrid_content" class = "display_item">
-						<p> In 2019, I headed to San Francisco to join the Design organization at 
-							<a class = "intext"
-								href = "https://www.plangrid.com/"
-								target = "_blank"> 
-								PlanGrid</a>, where I:
-						</p>
-						<ul>
-							<li>Headed major user research studies that heavily informed design/product decisions</li>
-							<li>Developed project plans, led interviews/concept tests, built 
-								<a class = "intext"
-									href = "https://theblog.adobe.com/putting-personas-to-work-in-ux-design-what-they-are-and-why-theyre-important/"
-									target = "_blank">
-								personas</a> 
-							and concept maps </li>
-							<li>Generated actionable findings by consolidating primary and secondary research, data analysis
-								(<a class = "intext"
-									href = "https://looker.com/platform/overview"
-									target = "_blank">Looker</a>, 
-								<a class = "intext"
-									href = "https://amplitude.com/behavioral-analytics-platform"
-									target = "_blank">
-									Amplitude</a>)</li>
-							<li>Achieved stakeholder buy-in with compelling reports and presentations</li>
-							<li>Expedited front-end accessibility compliance with new review system for designers + devs</li>
-						</ul>
-						<img class = "side_by_side half" src = "./images/planthunt.jpg">
-						<img class = "side_by_side half"  src = "./images/museum.jpg">
-	
-					</div>
-	
-					<div id = "CIBC_content" class = "display_item">
-						<p>In my first UX-focused position, I made a splash at the CIBC digital banking department:</p>
-						<ul>
-							<li>Improved design through insights from usability tests, interviews, surveys, first-click tests, and more</li>
-							<li>Synthesized data and delivered concise recommendations in stakeholder reports and presentations</li> 
-							<li>Collaborated effortlessly with diverse teams, leading dynamic sprint workshops 
-								(e.g. research alignment, personas)</li>
-							<li>Established use cases for new products through market research, quantitative analysis 
-								(<a class = "intext" 
-									href = "https://www.tableau.com/products/cloud-bi"
-									target = "_blank">Tableau</a>, Excel)</li>
-						</ul>
-					</div>
-	
-					<div id = "Enable_content" class = "display_item">
-						<p>After just one term of school, I landed my first coop position!</p>
-						<ul>
-							<li>Produced interactive courseware and lab activities for 3+ university-level electronics courses, 
-								delivered to multinational clients such as
-								<a class = "intext"
-									href = "https://www.ni.com/en-ca.html"
-									target = "_blank">
-								National Instruments</a></li>
-							<li>Collaboratively generated creative multimedia teaching aids for engineering and coding</li> 
-							<li>Tailored content using HTML5 to match clients' brand standards and streamline design</li>
-						</ul>
-					</div>
-	
-					<div id = "camp_content" class = "display_item">
-						<p>
-							<a class = "intext"
-								href = "https://campscugog.org/"
-								target = "_blank">
-								Overnight camp</a>
-							is a fast-paced environment where the days are long, the possibilities are endless, and the staff work hard:  </p>
-						<ul>
-							<li>Took initiative to lead new activities, address issues, improve everyday processes</li>
-							<li>Managed 7 campers with unique needs through prompt critical thinking, confident decision-making, and empathetic communication</li> 
-							<li>Ensured accountability and camper success through close partnership with fellow staff, parents</li>
-						</ul>
-						<img class = "single small" src = "./images/camp.jpg">
-					</div>
-	
-					<div id = "Kumon_content" class = "display_item">
-						<p>As a grader at a 
-							<a class = "intext"
-								href = "https://www.kumon.com/ca-en/"
-								target = "_blank">
-								Kumon</a> 
-							tutoring centre, I multi-tasked, juggled competing priorities, and ultimately: </p>
-						<ul>
-							<li>Improved student understanding of math and English through targeted verbal/written feedback</li>
-							<li>Graded student work accurately, rapidly, and neatly with a keen eye for detail</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		
 		<div class = "section_wrapper" id = "project_section" >
 			<h2>Projects</h2>
 
 			<div class = "row">
-
-				<div id = "website" class = "card left" onclick = "projectClick(this)">
+				<div id = "data_collection" class = "card" onclick = "projectClick(this)">
 					<div class = "card_content">
 						<div class = "card_img">
-							<img src = "images/website.PNG">
+							<img src = "images/projects/data_collection2.PNG">
+						</div>
+						<div class = "card_text">
+							<h3>Data Collection Flows</h3>
+							<p>Helming the design of several new features for Autodesk’s construction management app.</p>
+						</div>
+					</div>
+				</div>
+
+				<div id = "ucompose" class = "card" onclick = "projectClick(this)">
+					<div class = "card_content">
+						<div class = "card_img">
+							<img src = "images/projects/ucompose/implemented.png">
+						</div>
+						<div class = "card_text">
+							<h3>UCompose</h3>
+							<p>Creating a drum machine that welcomes novice users and leverages the power of genetic algorithms.</p>
+						</div>
+					</div>
+				</div>
+
+				<div id = "website" class = "card" onclick = "projectClick(this)">
+					<div class = "card_content">
+						<div class = "card_img">
+							<img src = "images/projects/website.PNG">
 						</div>
 						<div class = "card_text">
 							<h3>Personal Website</h3>
@@ -283,88 +136,69 @@
 					</div>
 				</div>
 
-				<div id = "mic" class = "card right" onclick = "projectClick(this)">
+				<!-- <div id = "mic" class = "card" onclick = "projectClick(this)">
 					<div class = "card_content">
 						<div class = "card_img">
-							<img src = "images/audio-circuit.jpg">
+							<img src = "images/projects/audio-circuit.jpg">
 						</div>
 						<div class = "card_text">
 							<h3>Audio Processor</h3>
-							<p>I applied new skills in circuit design to create a high-performing signal processing circuit!</p>						
+							<p>Applying new learnings in circuit design to create a high-performing vocal EQ signal processing circuit!</p>						
 						</div>
-					</div>
-				</div>
-			</div>
+					</div> 
+				</div>-->
 
-			<div class = "row">
-				<div id = "FAQ" class = "card left" onclick = "projectClick(this)">
+				<div id = "FAQ" class = "card" onclick = "projectClick(this)">
 					<div class = "card_content">
 						<div class = "card_img">
-							<img src = "images/faq_cover.png">
+							<img src = "images/projects/faq_cover.png">
 						</div>
 						<div class = "card_text">
-							<h3>FAQ for Social Media</h3>
-							<p>Answering common questions about auditioning for a cappella in concise, compelling Instagram stories.</p>
+							<h3>FAQ Graphics for Social Media</h3>
+							<p>Answering common questions about auditioning for a cappella into beautiful, concise Instagram stories.</p>
 						</div>
 					</div>				
 				</div>
 
-				<div id = "article_summary" class = "card right" onclick = "projectClick(this)">
+				<div id = "article_summary" class = "card" onclick = "projectClick(this)">
 					<div class = "card_content">
 						<div class = "card_img">
-							<img src = "images/article_summary_cover.png">
+							<img src = "images/projects/article_summary_cover.png">
 						</div>
 						<div class = "card_text">
 							<h3>Design Article One-Pager</h3>
-							<p>After reading a fascinating article about word-of-mouth and mobile apps, I synthesized the key ideas into this neat one-pager.</p>
+							<p>Condensing an interesting UX-related article into a clean, compelling one-page infographic.</p>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class = "row">
-				<div id = "flex" class = "card left" onclick = "projectClick(this)">
+				<div id = "flex" class = "card" onclick = "projectClick(this)">
 					<div class = "card_content">
 						<div class = "card_img">
-							<img src = "images/flex-prototype.png">
+							<img src = "images/projects/flex-prototype.png">
 						</div>
 						<div class = "card_text">
-							<h3>CIBC Flex Project</h3>
+							<h3>CIBC Flex</h3>
 							<p>Ultimately selected for further development, this innovative solution was the result of thoughtful UX and product research.</p>
 						</div>
 					</div>
 				</div>
-				<div id = "zine" class = "card right" onclick = "projectClick(this)">
+				<div id = "zine" class = "card" onclick = "projectClick(this)">
 					<div class = "card_content">
 						<div class = "card_img">
-							<img src = "images/zine_cover.png">
+							<img src = "images/projects/zine_cover.png">
 						</div>
 						<div class = "card_text">
 							<h3>Indigo, Misfit: Art Zine</h3>
-							<p>A collection of paintings and drawings, all derived from the same base image and structured together with minimalistic graphic design.</p>
+							<p>Transforming one photograph into a series of artworks in different media and tying them together with minimalistic graphic design.</p>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class = "row">
-				<div id = "operation" class = "card left" onclick = "projectClick(this)">
+				<div id = "watoplan" class = "card" onclick = "projectClick(this)">
 					<div class = "card_content">
 						<div class = "card_img">
-							<img src = "images/operation_circuit.jpg">
-						</div>
-						<div class = "card_text">
-							<h3>Arduino/C Game</h3>
-							<p>The game of Operation is twice as fun when you bring Arduinos, C, and I2C into the equation.</p>
-						</div>
-					</div>
-					
-				</div>
-	
-				<div id = "watoplan" class = "card right" onclick = "projectClick(this)">
-					<div class = "card_content">
-						<div class = "card_img">
-							<img src = "images/watoplan-2.png">
+							<img src = "images/projects/watoplan-2.png">
 						</div>
 						<div class = "card_text">
 							<h3>What-to-Plan</h3>
@@ -372,12 +206,66 @@
 						</div>
 					</div>
 				</div>
+				<div id = "blank" class = "card blank">
+					<div class = "card_content">
+					</div>
+				</div>
 			</div>
 
+			<div id = "data_collection_content" style = "display:none">
+				<h3>Data Collection Flows</h3>
+				<h4>Autodesk | Sept - Dec 2020</h4>
+				<p>Helming the design of several new features for Autodesk’s construction management app, working with product and engineering from ideation to feature shipment.</p>
+				<p><i>Please note that feature details and imagery have been withheld as necessitated by product release cycles.</i></p>
+				<p><strong>Skills: </strong>Complete iterative design process, cross-platform design, inter-team collaboration, developer handoff
+				<br><strong>Tools: </strong>Pen and paper, Balsamiq, Figma, UserTesting.com, ProdPad, Confluence, JIRA</p>
+	
+				<ul>
+					<li>Began by gathering user and business requirements through interviews of customers and customer-facing roles, survey of feature requests using ProdPad, and competitive analysis</li>
+					<li>Initiated discussions with PMs and engineers from 5 involved teams, including Design System, platform teams, and connected feature teams, in order to determine possibilities and constraints</li>
+					<li>Mapped open questions and potential workflows, progressing into low-fidelity ideation involving team members, other designers</li>
+					<li>As ideas converged into potential solutions, conducted concept tests with customers using wireframes built in Balsamiq </li>
+					<li>Created hi-fidelity designs in Figma; refined these further through usability testing via UserTesting.com</li>
+					<li>Worked closely with developers for web, iOS, Android, web to ensure smooth handoff and perform design QA for pixel-perfect delivery</li>
+				</ul>
+			</div>
+
+			<div id = "ucompose_content" style = "display:none">
+				<h3>UCompose</h3>
+				<h4>UW | May - Aug 2020</h4>
+				<p>Creating a drum machine that welcomes novice users and leverages the power of genetic algorithms. 
+					I collaboratively led the user research and design process and, in the implementation phase, was repsonsible for building the graphical interface in Java.</p>
+				<p><strong>Skills: </strong>User interviews, concept testing, UI development, secondary research
+				<br><strong>Tools: </strong>Google Design Sprint, Figma, Java, Processing, rainbow spreadsheet
+				<br><strong>Collaborators: </strong> Vlad Hociota, Arushi Mathur, Ellen McGee, Shanthosh Pushparajah, Sienna Wishart</p>
+	
+				<ul>
+					<li>Tools and processes for digital music creation are often complex and difficult to learn, as supported by secondary research in design and music journals</li>
+					<li>Was tasked with designing experience to make digital music creation accessible for inexperienced users while leveraging music generation capabilities of genetic algorithms</li>
+					<li>Kickstarted design process with Google Sprint: collected inspiration from diverse industries, ideated potential solutions, and got insights quickly through rapid prototyping and user testing</li>
+				</ul>
+
+				<img class = "side_by_side half" src = "images/projects/ucompose/sprint1.png">
+				<img class = "side_by_side half" src = "images/projects/ucompose/sprint2.png">
+
+
+				<ul>
+					<li>Iterated based on findings, prototyping two new concepts aimed at investigating design hypotheses derived from Sprint</li>
+					<li>Assessed concepts in one-hour interview + test sessions with range of users, leading to selection of Concept B with numerous UX improvements</li>
+					<li>Implemented graphical UI of designed solution in Processing (Java-based IDE/language), modifying existing libraries to match mocks closely</li>
+				</ul>
+
+				<img class = "single wide" src = "images/projects/ucompose/implemented.png">
+
+				<p>Curious about what a genetic algorithm is or how it can make music? Well, you’re in luck. As part of this assignment, I also got to flex my graphical communication skills in creating this one-pager:</p>
+
+				<img class = "single wide" src = "images/projects/ucompose/graphic.png">
+
+			</div>
 
 			<div id = "website_content" style = "display: none;">
 				<h3>Personal Website<h3>
-				<h4>Apr - May 2020</h4>
+				<h4>Personal Project | Apr - May 2020</h4>
 				<p>Designing and developing a fully responsive site to hone the skills I'm passionate about.</p>
 
 				<p><strong>Skills: </strong>Design for mobile & desktop, copywriting, responsive frontend web development
@@ -450,10 +338,11 @@
 				</p>
 	
 			</div>
-			<div id = "mic_content" style = "display: none;"> 
+
+			<!-- <div id = "mic_content" style = "display: none;"> 
 				<h3>Audio Processor</h3>
 				<h4>UW | DEC 2019</h4>
-				<p>I applied new skills in circuit design to create a high-performing signal processing circuit with applications in 
+				<p>Applying new learnings in circuit design to create a high-performing signal processing circuit with applications in 
 					a field that interests me, vocal music.
 				</p>
 
@@ -465,16 +354,17 @@
 					<li>Designed and built circuit that conditions microphone input with the preferred frequency response for vocal music</li>
 					<li>Took initiative to research ideal frequency response and determine new and optimal filter designs: </li>
 				</ul>
-				<img class = "single wide" src = "images/audio-circuit.jpg">
+				<img class = "single wide" src = "images/projects/audio-circuit.jpg">
 				<ul>
 					<li>Closely matched designed reponse while providing high output impedance and roll-off (-40 dB / decade), following design criteria, and ensuring quality via thorough testing	</li>
 				</ul>
-				<img class = "single wide" src = "images/mic_output.png">
-			</div>
+				<img class = "single wide" src = "images/projects/mic_output.png">
+			</div> -->
+
 			<div id = "FAQ_content" style = "display: none;"> 
-				<h3>FAQs for Social Media</h3>
+				<h3>FAQ Graphics for Social Media</h3>
 				<h4>Unaccompanied Minors A Cappella | SEP 2019</h4>
-				<p>Answering common questions about auditioning for a cappella in concise, compelling Instagram stories.</p>
+				<p>Answering common questions about auditioning for a cappella into beautiful, concise Instagram stories.</p>
 
 				<p><strong>Skills: </strong>Copywriting, mobile design, social media
 				<br><strong>Tools: </strong>Figma</p>
@@ -499,12 +389,12 @@
 				<h3>Design Article One-Pager</h3> 
 				<h4>UW | JUL 2019</h4>
 
-				<p>After reading a fascinating article about word-of-mouth and mobile apps, I synthesized the key ideas into this neat one-pager.</p>
+				<p>Condensing an interesting UX-related article into a clean, compelling one-page infographic.</p>
 
 				<p><strong>Skills: </strong>Synthesis, information design
 				<br><strong>Tools: </strong>Powerpoint</p>
 		
-				<img id = "infographic" class = "single wide" src = "images/article_summary.png">
+				<img id = "infographic" class = "single wide" src = "images/projects/article_summary.png">
 	
 			</div>
 
@@ -514,16 +404,15 @@
 				<h3>Indigo, Misfit: Art Zine</h3> 
 				<h4>Personal Project | NOV 2018</h4>
 
-				<p>A collection of paintings and drawings, all derived from the same base image and structured together with minimalistic graphic design.</p>
+				<p>Transforming one photograph into a series of artworks in different media and tying them together with minimalistic graphic design.</p>
 
 				<p><strong>Skills: </strong>Visual art, graphic design
 				<br><strong>Tools: </strong>Publisher, pen & ink, watercolour, marker</p>
 		
 				<p>I love visual art - you can see plenty of examples over on my 
 					<a class = "intext" href = "https://www.instagram.com/nim_chimpsky_fan_account/" target = "_blank">
-						art Instagram
-					</a>.
-					I created this zine to stretch my creativity, to celebrate two artists I admire, 
+						art Instagram</a>.
+					I created this zine to stretch my creativity, to celebrate two subjects I admire, 
 					and to try out a minimalistic approach to information design. 
 				</p>
 				<p>
@@ -532,7 +421,7 @@
 						here</a>.
 				</p>
 
-				<img class = "single wide" src = "images/zine.PNG">	
+				<img class = "single wide" src = "images/projects/zine.PNG">	
 			</div>
 
 			<div id = "flex_content" style = "display: none;"> 
@@ -548,7 +437,7 @@
 					<li>Led cross-functional coop group in designing innovative solution with strong case for business and users</li>
 					<li>Headed full-scale user research initiative, involving 3 surveys and 650+ participants, to understand problem space, gather concept feedback, and inform iteration and next steps</li>
 				</ul>
-				<img class = "single wide" src = "images/flex-research.png">					
+				<img class = "single wide" src = "images/projects/flex-research.png">					
 				<ul>
 					<li>Further directed concept development via market and competitive research</li>
 					<li>Took on product management role, guiding establishment of decision criteria and expected results and networking across business units to determine feasibility and business benefits</li>
@@ -557,10 +446,10 @@
 				<p>As an exercise in mobile UI, I recently re-designed the wireframes we delivered for this project! The new designs are not only more attractive and 
 					more in line with brand standards, but they better serve their purpose of communicating the ideas behind the initiative.
 				</p> 
-				<img class = "single wide" src = "images/flex-prototype.png">	
+				<img class = "single wide" src = "images/projects/flex-prototype.png">	
 				
 			</div>
-
+<!-- 
 			<div id = "operation_content" style = "display: none;"> 
 				<h3>Arduino/C Game</h3>
 				<h4>UW | July 2018</h4>
@@ -585,8 +474,8 @@
 				<img class = "single wide" src = "images/operation_schematic.png">
 				<p>&nbsp</p>
 				<img class = "single wide" src = "images/operation_circuit.jpg">
+			</div> -->
 
-			</div>
 			<div id = "watoplan_content" style = "display: none;"> 
 				<h3>What-to-Plan<h3>
 				<h4>UW | Fall 2017</h4>
@@ -651,9 +540,175 @@
 
 		</div>
 
+		<div class = "section_wrapper" id = "experience_section">
+			<h2>Experience</h2>
+			<div id = "experience_content">
+				<div id = "experience_list" class = "side_list">
+					<div id = "Autodesk2" class = "list_item selected" onclick = "openDisplay(this, 'experience')">
+						<h3>UX Design</h3>
+						<h4>Autodesk | Sept - Dec 2020 </h4>
+					</div>
+					<div id = "Avidbots" class = "list_item" onclick = "openDisplay(this, 'experience')">
+						<h3>DevOps and QA Lead</h3>
+						<h4>Avidbots | Jan - Apr 2020 </h4>
+					</div>
+					<div id = "Autodesk1" class = "list_item" onclick = "openDisplay(this, 'experience')">
+						<h3>UX Research</h3>
+						<h4>Autodesk | May - Aug 2019 </h4>
+					</div>
+					<div id = "CIBC" class = "list_item" onclick = "openDisplay(this, 'experience')">
+						<h3>UX Research</h3>
+						<h4>CIBC | Sep - Dec 2018 </h4>
+					</div>
+					<div id = "Enable" class = "list_item" onclick = "openDisplay(this, 'experience')">
+						<h3>Training Development</h3>
+						<h4>Enable Education | Jan - Apr 2018 </h4>
+					</div>
+					<div id = "camp" class = "list_item" onclick = "openDisplay(this, 'experience')">
+						<h3>Counsellor</h3>
+						<h4>Camp Scugog | Jul 2016 - Aug 2018 </h4>
+					</div>
+					<div id = "Kumon" class = "list_item" onclick = "openDisplay(this, 'experience')">
+						<h3>Grader</h3>
+						<h4>Kumon | Nov 2015 - Jun 2017</h4>
+					</div>
+				</div>
+
+				<div class = "page_indicator" >
+					<div class = "circle_container" id = "exp_page_circles">
+						<div class = "circle selected" onclick = "circleClick(0)"></div>
+						<div class = "circle" onclick = "circleClick(1)"></div>
+						<div class = "circle" onclick = "circleClick(2)"></div>
+						<div class = "circle" onclick = "circleClick(3)"></div>
+						<div class = "circle" onclick = "circleClick(4)"></div>
+						<div class = "circle" onclick = "circleClick(5)"></div>
+						<div class = "circle" onclick = "circleClick(6)"></div>
+					</div>
+
+
+				</div>
+
+				<div id = "experience_display" class = "display">
+					<div id = "Autodesk2_content" class = "display_item">
+						<p>
+							For my most recent coop, I returned to Autodesk as a UX Designer!</p>
+						<ul>
+							<li>Designed workflows to empower timely, interconnected data collection 
+								across features of Autodesk Build app for mobile, web, and Windows</li>
+							<li>Maximized customer value through user research, collaborating across many teams and leveraging tools such as UserTesting, DoveTail</li>
+							<li>Worked closely with developers from concept design to feature release to ensure feasibility, cross-platform consistency, and quality</li>
+						</ul>
+					</div>
+
+					<div id = "Avidbots_content" class = "display_item">
+						<!-- <div style = "width: 100px; height: 10px; background-color: var(--flower-yellow); margin-bottom: 25px;"></div> -->
+						<p>
+							In Winter 2020, I joined the web team at 
+							<a class = "intext"
+								href = "https://www.avidbots.com/"
+								target = "_blank"> 
+								Avidbots</a>,
+							where I not only learned a ton but also made a big impact:</p>
+						<ul>
+							<li>Streamlined environment configuration process taking from 22 to 8 manual steps</li>
+							<li>Sped up unit tests more than 200% using parallelization, new libraries, CSS techniques</li>
+							<li>Uncovered and resolved bugs in coordination with developers and product managers</li>
+							<li>Stepped up to code frontend fixes and refactor Angular components</li>
+						</ul>
+					</div>
+
+					<div id = "Autodesk1_content" class = "display_item">
+						<p> In 2019, I headed to San Francisco to join the Design organization at 
+							<a class = "intext"
+								href = "https://www.plangrid.com/"
+								target = "_blank"> 
+								PlanGrid</a>(now a part of Autodesk), where I:
+						</p>
+						<ul>
+							<li>Headed major user research studies that heavily informed design/product decisions</li>
+							<li>Developed project plans, led interviews/concept tests, built 
+								<a class = "intext"
+									href = "https://theblog.adobe.com/putting-personas-to-work-in-ux-design-what-they-are-and-why-theyre-important/"
+									target = "_blank">
+								personas</a> 
+							and concept maps </li>
+							<li>Generated actionable findings by synthesizing qualitative and quantitative data analysis
+								(<a class = "intext"
+									href = "https://looker.com/platform/overview"
+									target = "_blank">Looker</a>, 
+								<a class = "intext"
+									href = "https://amplitude.com/behavioral-analytics-platform"
+									target = "_blank">
+									Amplitude</a>)</li>
+							<li>Expedited front-end accessibility compliance with new review system for designers + devs</li>
+						</ul>
+						<img class = "side_by_side half" src = "./images/planthunt.jpg">
+						<img class = "side_by_side half"  src = "./images/museum.jpg">
+
+					</div>
+
+					<div id = "CIBC_content" class = "display_item">
+						<p>In my first UX-focused position, at the CIBC digital banking department:</p>
+						<ul>
+							<li>Improved design through insights from usability tests, interviews, surveys, first-click tests, and more</li>
+							<li>Synthesized data and delivered concise recommendations in stakeholder reports and presentations</li> 
+							<li>Collaborated effortlessly with diverse teams, leading dynamic sprint workshops 
+								(e.g. research alignment, personas)</li>
+							<li>Established use cases for new products through market research, quantitative analysis 
+								(<a class = "intext" 
+									href = "https://www.tableau.com/products/cloud-bi"
+									target = "_blank">Tableau</a>, Excel)</li>
+						</ul>
+					</div>
+
+					<div id = "Enable_content" class = "display_item">
+						<p>After just one term of school, I landed my first coop position!</p>
+						<ul>
+							<li>Created interactive courseware and lab activities for 3 university-level electronics courses, 
+								delivered to multinational clients such as
+								<a class = "intext"
+									href = "https://www.ni.com/en-ca.html"
+									target = "_blank">
+								National Instruments</a></li>
+							<li>Elevated visual appeal, brand consistency of courseware with HTML/CSS</li>
+						</ul>
+					</div>
+
+					<div id = "camp_content" class = "display_item">
+						<p>
+							<a class = "intext"
+								href = "https://campscugog.org/"
+								target = "_blank">
+								Overnight camp</a>
+							is a fast-paced environment where the days are long, the possibilities are endless, and the staff work hard:  </p>
+						<ul>
+							<li>Managed 7 campers with unique needs through prompt critical thinking, confident decision-making, and empathetic communication</li> 
+							<li>Ensured accountability and camper success through close partnership with fellow staff, parents</li>
+						</ul>
+						<img class = "single small" src = "./images/camp.jpg">
+					</div>
+
+					<div id = "Kumon_content" class = "display_item">
+						<p>As a grader at a 
+							<a class = "intext"
+								href = "https://www.kumon.com/ca-en/"
+								target = "_blank">
+								Kumon</a> 
+							tutoring centre, I multi-tasked, juggled competing priorities, and ultimately: </p>
+						<ul>
+							<li>Improved student understanding of math and English through targeted verbal/written feedback</li>
+							<li>Graded student work accurately, rapidly, and neatly with a keen eye for detail</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>		
+		
+
+
 		<div class = "section_break_solid"></div>
 
-		<div class = "blue_background">
+		<!-- <div class = "blue_background">
 			<div class="section_wrapper" id = "skills">
 				<h2>Skills</h2>
 				<table>
@@ -666,7 +721,6 @@
 								<p><b>Frontend web development </b> HTML • CSS • JavaScript • Typescript • Angular • Material • i18n</p>
 								<p><b>Backend web development </b>PHP • phpMyAdmin • SQL • Database manipulation • API and microservice programming and testing</p>
 								<p><b>Additional object-oriented programming</b> C/C++ • Java • Python</p>
-								<p><b>Scrum leadership </b> Agile • Jira • Confluence</p>
 							</div>
 						</td>
 					</tr>
@@ -709,7 +763,7 @@
 					</tr>
 				</table>
 			</div>
-		</div>
+		</div> -->
 		</div>
 
 		<div class = "section_break_solid"></div>
@@ -721,23 +775,29 @@
 				<tr>
 					<td class = "wide">
 						<h3>Music</h3>
-						<p> I love to sing, play the flute, and write original songs!
-							I'm also part of the 
+						<p> I love to sing, write original songs, and play flute!
+							I also sing with the
 							<a class = "intext" 
 								href = "https://www.youtube.com/user/unaccompaniedminoruw" 
 								target = "_blank"
 								SameSite = "none"
 								secure>
 								Unaccompanied Minors,</a> 
-							a competitive a cappella group. 
-							I've even served multiple terms as the group's President, 
-							during which I doubled event attendance	and revamped cumbersome admin processes. 
+							a competitive a cappella group. This year, I've taken on the new role of Video Director, where I'm learning a ton about editing in Adobe Premiere. 
+							Check out our cover of 
+							<a class = "intext" 
+								href = "https://www.youtube.com/watch?v=Vd-IKxtnLE8&ab_channel=UnaccompaniedMinors"
+								target = "_blank"
+								SameSite = "none"
+								secure>
+								Shake It Out</a> by Florence and the Machine!
 						</p>
 					</td>
 					<td class = "buffer"></td>
 					<td class = "narrow">
-						<img class = "single" src = "./images/busking.jpg">
-						<!-- <img src = "./images/bluewine.jpg"> -->
+						<div class = "iframecontainer">
+							<iframe class = "video" src="https://www.youtube.com/embed/Vd-IKxtnLE8?start=3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					</td>
 				</tr>
 				<tr>
@@ -754,21 +814,15 @@
 					</td>
 					<td class = "buffer"></td>
 					<td class = "narrow">
-						<!-- SnapWidget -->
-						<script src="https://snapwidget.com/js/snapwidget.js"></script>
-						<iframe src="https://snapwidget.com/embed/815211" 
-							class="snapwidget-widget" 
-							allowtransparency="true" 
-							frameborder="0" 
-							scrolling="no" 
-							style="border:none; overflow:hidden;  width:100%; ">
-						</iframe>
+						<div class ="iframecontainer">
+							<div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" src="https://socialproofed.com/widget-ui/insta-feed?w=600b46957494bd03964b1bb4" allowfullscreen></iframe> </div>
+						</div>						
 					</td>
 				</tr>
 				<tr>
 					<td class = "wide">
 						<h3>Etc.</h3>
-						<p>I keep active by jogging and by walking the family dogs: Lucie, Franklin, and Boo (who is named, ironically, after 
+						<p>I keep active by jogging and by walking the family dogs: Lucie, Franklin, and Boo (short for 
 							<a class = "intext"
 								href = "https://en.wikipedia.org/wiki/Bucephalus"
 								target = "_blank">
@@ -783,9 +837,7 @@
 					</td>
 					<td class = "buffer"></td>
 					<td class = "narrow">
-							<img class = "side_by_side third"  src = "./images/boo-2.jpg">
-							<img class = "side_by_side third"  src = "./images/lucie-2.jpg">
-							<img class = "side_by_side third"  src = "./images/franklin-2.jpg">
+							<img src = "./images/all_dogs.png">
 					</td>
 				</tr>
 			</table>
@@ -796,7 +848,7 @@
 			<p>Ready to do great things together? Shoot me en 
 				<a class = "intext" href = "mailto:kimberley.pita@gmail.com">email!</a>
 			<br>You can also take a look at my resume
-				<a class = "intext" href="./assets/Kimberley Pita - Resume.pdf" target = "_blank">here</a>.
+				<a class = "intext" href="./assets/Kim Pita_Resume.pdf" target = "_blank">here</a>.
 			</p>
 			<a href="mailto:kimberley.pita@gmail.com"><img class="logo" src = "./images/email.png"></img></a>
 			<a href="https://linkedin.com/in/kimberley-pita" target="_blank"><img class="logo" src = "./images/LinkedIn.png"></img></a>

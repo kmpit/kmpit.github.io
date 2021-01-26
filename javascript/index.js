@@ -6,7 +6,7 @@ function onInit(){
     console.log('onInit called');
 
     /* Show default items */
-    document.getElementById("Avidbots_content").style.display = "block";
+    document.getElementById("Autodesk2_content").style.display = "block";
 
     // getCurrentTerm(); 
 }
@@ -143,7 +143,7 @@ function onListScroll (){
     
         // highlight the circle corresponding to the item 
         console.log('here i am');
-        circles = document.getElementById("exp_page_indicator").children;
+        circles = document.getElementById("exp_page_circles").children;
         for (var j = 0; j < circles.length; j++){
             // unhighlight previous selection
             if (circles[j].className == "circle selected"){
@@ -180,7 +180,7 @@ function circleClick (index) {
     // account for existing scroll to get correct scroll_distance to plug into scrollTo
     var scrollLeft = document.getElementById("experience_list").scrollLeft;
 
-    var scroll_distance = rect.left + scrollLeft; 
+    var scroll_distance = rect.left +scrollLeft - window.screen.width * 0.3;
 
     // scroll the list to the desired element and the scroll event listener will update the display
     document.getElementById('experience_list').scrollTo(scroll_distance, 0);
